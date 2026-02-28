@@ -18,6 +18,7 @@ import Harrogate from "./page/Location/Harrogate";
 import Leeds from "./page/Location/Leeds";
 import Thirsk from "./page/Location/Thirsk";
 import Wakefield from "./page/Location/Wakefield";
+import PricingPage from "./page/PricingPage";
 function App() {
   return (
     <Router>
@@ -40,6 +41,7 @@ function App() {
 
         <Route path="/locations/wakefield" element={<Wakefield />} />
 
+        <Route path="/pricing" element={<PricingPage />} />
 
 
 

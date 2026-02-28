@@ -24,12 +24,3 @@ const Boroughbridge = () => {
 
 export default Boroughbridge;
 
-// ─────────────────────────────────────────────
-// Other location pages follow the exact same pattern:
-//
-// HarrogatePage.jsx   → key: "harrogate"
-// ThirskPage.jsx      → key: "thirsk"
-// LeedsPage.jsx       → key: "leeds"
-// GarforthPage.jsx    → key: "garforth"
-// WakefieldPage.jsx   → key: "wakefield"
-// ─────────────────────────────────────────────

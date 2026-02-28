@@ -13,6 +13,11 @@ import FullValetPage from "../src/page/Service/FullValet"
 import DeepCleanPage from "./page/Service/DeepClean";
 import FullDetailPage from './page/Service/FullDetailPage'
 import Boroughbridge from './page/Location/Boroughbridge'
+import Garforth from "./page/Location/Garforth";
+import Harrogate from "./page/Location/Harrogate";
+import Leeds from "./page/Location/Leeds";
+import Thirsk from "./page/Location/Thirsk";
+import Wakefield from "./page/Location/Wakefield";
 function App() {
   return (
     <Router>
@@ -28,6 +33,13 @@ function App() {
         <Route path="/services/full-detail" element={<FullDetailPage />} />
 
         <Route path="/locations/boroughbridge" element={<Boroughbridge />} />
+        <Route path="/locations/garforth" element={<Garforth />} />
+        <Route path="/locations/harrogate" element={<Harrogate />} />
+        <Route path="/locations/leeds" element={<Leeds />} />
+        <Route path="/locations/thirsk" element={<Thirsk />} />
+
+        <Route path="/locations/wakefield" element={<Wakefield />} />
+
 
 
 

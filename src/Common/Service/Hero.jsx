@@ -8,7 +8,7 @@ export default function Hero({
   breadcrumb
 }) {
   return (
-    <section className="relative h-[50vh] min-h-[400px] flex items-end overflow-hidden">
+    <section className="relative h-[70vh] min-h-[400px] flex items-end overflow-hidden">
 
       {/* Dynamic Background Image */}
       <img

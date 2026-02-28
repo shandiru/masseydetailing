@@ -24,12 +24,14 @@ const features = [
 
 const WhyChooseUsSection = () => {
   return (
+    /* Pure Black Background */
     <section className="py-24 bg-black">
       <div className="max-w-7xl mx-auto px-6">
 
-        {/* Heading */}
+        {/* Heading Section */}
         <div className="text-center mb-16">
-          <span className="text-sm font-semibold text-blue-500 uppercase tracking-wider">
+          {/* Section subtitle in Blue */}
+          <span className="text-sm font-semibold text-blue-600 uppercase tracking-wider">
             Why Choose Us
           </span>
 
@@ -38,7 +40,7 @@ const WhyChooseUsSection = () => {
           </h2>
         </div>
 
-        {/* Grid */}
+        {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
           {features.map((feature, index) => {
@@ -47,11 +49,12 @@ const WhyChooseUsSection = () => {
             return (
               <div
                 key={index}
-                className="group p-8 rounded-2xl border border-gray-800 bg-gray-900 hover:border-blue-500/40 hover:bg-blue-500/5 transition-all duration-500"
+                /* Border and Background adjusted for exact image match */
+                className="group p-8 rounded-2xl border border-white/5 bg-[#0A0A0A] hover:border-blue-600/40 hover:bg-blue-600/5 transition-all duration-500"
               >
-                {/* Icon */}
-                <div className="h-12 w-12 rounded-xl bg-blue-500/10 flex items-center justify-center mb-5 group-hover:bg-blue-500/20 transition-colors">
-                  <Icon className="h-6 w-6 text-blue-500" />
+                {/* Icon Container with subtle blue glow */}
+                <div className="h-12 w-12 rounded-xl bg-blue-600/10 flex items-center justify-center mb-5 group-hover:bg-blue-600/20 transition-colors">
+                  <Icon className="h-6 w-6 text-blue-600" />
                 </div>
 
                 {/* Title */}
@@ -59,8 +62,8 @@ const WhyChooseUsSection = () => {
                   {feature.title}
                 </h3>
 
-                {/* Description */}
-                <p className="text-sm text-gray-400 leading-relaxed">
+                {/* Description - Muted Gray */}
+                <p className="text-sm text-gray-500 leading-relaxed">
                   {feature.description}
                 </p>
               </div>

@@ -70,7 +70,7 @@ const HeroSection = () => {
               {["JW", "ST", "MR", "LH", "PD"].map((item, index) => (
                 <div
                   key={index}
-                  className="h-8 w-8 rounded-full bg-gray-800 border-2 border-black flex items-center justify-center text-xs font-bold text-white"
+                  className="h-8 w-8 rounded-full  border-2 border-black flex items-center justify-center text-xs font-bold text-white"
                 >
                   {item}
                 </div>

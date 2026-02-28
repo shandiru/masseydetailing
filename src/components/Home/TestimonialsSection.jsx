@@ -28,18 +28,13 @@ const TestimonialsSection = () => {
   const [current, setCurrent] = useState(0);
 
   const prevSlide = () => {
-    setCurrent((prev) =>
-      prev === 0 ? testimonials.length - 1 : prev - 1
-    );
+    setCurrent((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
   };
 
   const nextSlide = () => {
-    setCurrent((prev) =>
-      prev === testimonials.length - 1 ? 0 : prev + 1
-    );
+    setCurrent((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
   };
 
-  // Auto slide every 5s
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
@@ -50,70 +45,69 @@ const TestimonialsSection = () => {
   return (
     <section className="py-24 bg-black">
       <div className="max-w-7xl mx-auto px-6">
-
-        {/* Heading */}
+        
+        {/* Heading Section */}
         <div className="text-center mb-16">
-          <span className="text-sm font-semibold text-blue-500 uppercase tracking-wider">
+          <span className="text-[12px] font-bold text-blue-600 uppercase tracking-[0.2em]">
             Testimonials
           </span>
-
-          <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-white">
+          <h2 className="mt-4 text-4xl sm:text-5xl font-bold text-white tracking-tight">
             What our customers say
           </h2>
         </div>
 
-        {/* Slider */}
-        <div className="relative max-w-3xl mx-auto">
+        {/* Testimonial Card */}
+        <div className="relative max-w-4xl mx-auto">
+          <div className="bg-[#0A0A0A] rounded-3xl border border-white/5 p-10 sm:p-16 text-center transition-all duration-500 shadow-2xl">
+            
+            {/* Blue Quote Icon matching image */}
+            <div className="flex justify-center mb-8">
+              <Quote className="h-10 w-10 text-blue-600 opacity-60 fill-current" />
+            </div>
 
-          <div className="bg-gray-900 rounded-2xl border border-gray-800 p-8 sm:p-12 text-center transition-all duration-500">
-
-            <Quote className="h-8 w-8 text-blue-500/30 mx-auto mb-6" />
-
-            <p className="text-lg sm:text-xl text-gray-200 leading-relaxed italic">
+            <p className="text-xl sm:text-2xl text-gray-200 leading-relaxed italic font-medium">
               “{testimonials[current].text}”
             </p>
 
-            {/* Stars */}
-            <div className="mt-6 flex items-center justify-center gap-1">
+            {/* Blue Stars matching image */}
+            <div className="mt-8 flex items-center justify-center gap-1.5">
               {[...Array(5)].map((_, i) => (
                 <Star
                   key={i}
-                  className="h-4 w-4 fill-blue-500 text-blue-500"
+                  className="h-5 w-5 fill-blue-600 text-blue-600"
                 />
               ))}
             </div>
 
-            <div className="mt-3">
-              <span className="font-semibold text-white">
+            <div className="mt-6">
+              <span className="text-lg font-bold text-white">
                 {testimonials[current].name}
               </span>
-              <span className="text-gray-400 ml-2 text-sm">
+              <span className="text-gray-500 ml-3 text-sm font-medium">
                 {testimonials[current].location}
               </span>
             </div>
-
           </div>
 
-          {/* Controls */}
-          <div className="flex items-center justify-center gap-6 mt-8">
-
+          {/* Navigation Controls matching image style */}
+          <div className="flex items-center justify-center gap-5 mt-10">
             <button
               onClick={prevSlide}
-              className="h-10 w-10 rounded-full border border-gray-700 bg-gray-900 flex items-center justify-center text-white hover:bg-gray-800 transition-colors"
+              className="h-12 w-12 rounded-full border border-white/10 bg-black flex items-center justify-center text-white hover:bg-[#111] transition-all"
             >
-              <ChevronLeft className="h-5 w-5" />
+              <ChevronLeft className="h-6 w-6" />
             </button>
 
-            {/* Dots */}
-            <div className="flex items-center gap-2">
+            {/* Progress Dots */}
+            <div className="flex items-center gap-2.5">
               {testimonials.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrent(index)}
-                  className={`h-2 rounded-full transition-all duration-300 ${
+                  className={`h-2 rounded-full transition-all duration-500 ${
                     current === index
-                      ? "w-8 bg-blue-500"
-                      : "w-2 bg-gray-700 hover:bg-gray-500"
+                      ? "w-10 bg-blue-600"
+                      : "w-2.5 bg-white/10 hover:bg-white/20"
                   }`}
                 />
               ))}
@@ -121,13 +115,11 @@ const TestimonialsSection = () => {
 
             <button
               onClick={nextSlide}
-              className="h-10 w-10 rounded-full border border-gray-700 bg-gray-900 flex items-center justify-center text-white hover:bg-gray-800 transition-colors"
+              className="h-12 w-12 rounded-full border border-white/10 bg-black flex items-center justify-center text-white hover:bg-[#111] transition-all"
             >
-              <ChevronRight className="h-5 w-5" />
+              <ChevronRight className="h-6 w-6" />
             </button>
-
           </div>
-
         </div>
       </div>
     </section>

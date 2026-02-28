@@ -29,17 +29,20 @@ const StatsSection = () => {
   }, []);
 
   return (
-    <section className="py-20 bg-gray-900 border-y border-gray-800">
+    /* Pure Black Background as per image */
+    <section className="py-20 bg-black border-y border-gray-900">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
 
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
-              <div className="text-4xl sm:text-5xl font-bold text-blue-500 tabular-nums">
+              {/* Image-la irukura athe blue shade: text-blue-600 */}
+              <div className="text-4xl sm:text-5xl font-bold text-blue-600 tabular-nums">
                 {counts[index].toLocaleString()}
                 {stat.suffix}
               </div>
 
+              {/* Label text in subtle gray */}
               <div className="mt-2 text-sm text-gray-400 font-medium">
                 {stat.label}
               </div>

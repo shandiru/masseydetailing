@@ -39,12 +39,12 @@ export default function GDPRConsent() {
     <>
       {/* Cookie Consent Banner */}
       {visible && (
-        <div className="fixed bottom-6 right-6 max-w-xs p-5 rounded-lg bg-black text-white z-50 shadow-lg border border-red-600">
+        <div className="fixed bottom-6 right-6 max-w-xs p-6 rounded-2xl bg-black text-white z-50 shadow-2xl border border-blue-600/30">
           <p className="text-sm mb-4 text-gray-300 leading-relaxed text-center">
             We use cookies to improve your experience.{" "}
             <Link
               to="/privacy-policy"
-              className="underline font-semibold text-red-500 hover:text-red-600 transition-colors"
+              className="underline font-semibold text-blue-500 hover:text-blue-400 transition-colors"
             >
               See our Privacy Policy
             </Link>
@@ -53,14 +53,14 @@ export default function GDPRConsent() {
           <div className="flex justify-center gap-3">
             <button
               onClick={handleReject}
-              className="px-5 py-2 rounded-md bg-red-700 text-white text-sm hover:bg-red-800 transition"
+              className="px-5 py-2 rounded-lg bg-gray-800 text-white text-sm hover:bg-gray-700 transition font-medium"
             >
               Reject
             </button>
 
             <button
               onClick={handleAccept}
-              className="px-5 py-2 rounded-md text-sm text-white bg-red-600 hover:bg-red-700 transition"
+              className="px-5 py-2 rounded-lg text-sm text-white bg-blue-600 hover:bg-blue-700 transition shadow-lg shadow-blue-600/20 font-medium"
             >
               Accept
             </button>
@@ -73,13 +73,13 @@ export default function GDPRConsent() {
         <div className="fixed bottom-6 right-6 z-40">
           <button
             onClick={handleIconClick}
-            className="w-10 h-10 rounded-full bg-red-600 shadow-lg border border-white flex items-center justify-center hover:scale-105 transition cursor-pointer"
+            className="w-12 h-12 rounded-full bg-blue-600 shadow-lg border border-blue-400/20 flex items-center justify-center hover:scale-110 active:scale-95 transition-all cursor-pointer group"
             title="Cookie Preferences"
           >
             <img
               src="/revisit.svg"
               alt="Cookie Icon"
-              className="w-5 h-5 object-contain brightness-0 invert" 
+              className="w-6 h-6 object-contain brightness-0 invert opacity-90 group-hover:opacity-100" 
             />
           </button>
         </div>

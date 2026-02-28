@@ -1,14 +1,14 @@
 
-import Hero from "../components/Hero";
+import Hero from "../components/Home/Hero";
 
 
-import ServicesSection from '../components/ServicesSection';
-import StatsSection from "../components/StatsSection";
-import WhyChooseUsSection from "../components/WhyChooseUs";
-import PricingSection from "../components/PricingSection";
-import TestimonialsSection from "../components/TestimonialsSection";
-import ServiceAreasSection from "../components/ServiceAreasSection";
-import ShowroomCTA from "../components/ShowroomCTA"
+import ServicesSection from '../components/Home/ServicesSection';
+import StatsSection from "../components/Home/StatsSection";
+import WhyChooseUsSection from "../components/Home/WhyChooseUs";
+import PricingSection from "../components/Home/PricingSection";
+import TestimonialsSection from "../components/Home/TestimonialsSection";
+import ServiceAreasSection from "../components/Home/ServiceAreasSection";
+import ShowroomCTA from "../components/Home/ShowroomCTA"
 const Home = () => {
     return (
         <div>

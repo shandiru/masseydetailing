@@ -6,7 +6,7 @@ export const allServiceCards = [
     title: "Maintenance Scheme",
     description: "Keep your vehicle looking its best with regular upkeep.",
     price: "£70",
-    image: "/images/hero-car.jpg",
+    image: "/hero-car.jpg",
     href: "/services/maintenance-scheme",
   },
   {
@@ -14,7 +14,7 @@ export const allServiceCards = [
     title: "Full Valet",
     description: "A comprehensive clean inside and out for a showroom finish.",
     price: "£100",
-    image: "/images/full-valet.jpg",
+    image: "/full-valet.jpg",
     href: "/services/full-valet",
   },
   {
@@ -22,7 +22,7 @@ export const allServiceCards = [
     title: "Deep Clean",
     description: "An intensive restoration for neglected or heavily soiled vehicles.",
     price: "£175",
-    image: "/images/interior-clean.jpg",
+    image: "/interior-clean.jpg",
     href: "/services/deep-clean",
   },
   {
@@ -30,7 +30,7 @@ export const allServiceCards = [
     title: "Full Detail",
     description: "Machine polish & ceramic coating for the ultimate finish.",
     price: "£400",
-    image: "/images/detail-close.jpg",
+    image: "/detail-close.jpg",
     href: "/services/full-detail",
   },
 ];

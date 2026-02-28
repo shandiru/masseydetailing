@@ -87,7 +87,7 @@ export default function Header() {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 group">
           <img
-            src="/images/logo.png"
+            src="/logo.webp"
             alt="Massey Detailing"
             className="h-10 w-auto"
           />

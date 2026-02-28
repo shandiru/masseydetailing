@@ -12,7 +12,11 @@ const Footer = () => {
           <div>
             <div className="mb-6">
               {/* Replace with your actual logo image */}
-              <img src="/images/logo.png" alt="Massey Detailing" className="h-10 w-auto invert brightness-0" />
+           <img
+            src="/logo.webp"
+            alt="Massey Detailing"
+            className="h-10 w-auto"
+          />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
               Professional mobile car detailing across Yorkshire. We bring the showroom to your door.

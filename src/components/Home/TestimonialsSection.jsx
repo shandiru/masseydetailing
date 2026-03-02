@@ -3,24 +3,24 @@ import { ChevronLeft, ChevronRight, Quote, Star } from "lucide-react";
 
 const testimonials = [
   {
-    text: "Absolutely incredible work on my BMW. The ceramic coating has kept it looking showroom-fresh for months. Best detailer in Yorkshire.",
-    name: "James W.",
-    location: "Harrogate",
+    text: "Fantastic service by James. I had neglected cleaning the outside of my car for months- I work on a Port and with a white car it’s a challenge to keep it clean. I decided to book Massey Detailing for a deep clean having seen James’s work on Instagram. James arrived on time and didn’t stop for hours, it’s clear he has a great attention to detail and made my car look like new once again. I’ll be using James monthly from now on for a regular maintenace clean. Highly recommended.",
+    name: "Greg Lacey.",
+    location: "Uk",
   },
   {
-    text: "Used the Deep Clean on my family car after a muddy camping trip. You'd never know it had been off-road. Brilliant service.",
-    name: "Sarah T.",
-    location: "Leeds",
+    text: "James did an absolutely amazing job. Attention to detail second to none and what a fantastic finish. Cars like new again. Highly recommended.",
+    name: "BM RG.",
+    location: "UK",
   },
   {
-    text: "The Maintenance Scheme is perfect for keeping my Land Rover clean through the winter. Reliable, professional, and great value.",
-    name: "Mark R.",
-    location: "Boroughbridge",
+    text: "I don't often leave reviews, but I'm so pleased with the results on my car that I have to. James arrived promptly and worked his magic. I'm absolutely blown away by the finish, the depth of shine in the paint is amazing and the interior is like new - I don't think my car has ever looked better.",
+    name: "Dave Foster",
+    location: "UK",
   },
   {
-    text: "Had the Full Valet before selling my car and got a fantastic price for it. The buyer thought it was nearly new. Thank you!",
-    name: "Lucy H.",
-    location: "Wakefield",
+    text: "James is a true professional in what he does and really cares about the quality of his work. Always goes that extra mile to make sure the car is spotless. Would recommend to anyone as he’s the only person I’d use!",
+    name: "Dan Nilsson.",
+    location: "UK",
   },
 ];
 

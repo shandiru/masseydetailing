@@ -161,11 +161,11 @@ export default function Header() {
 
         {/* Call button */}
         <a
-          href="tel:07399539744"
+          href="tel:+441924910133"
           className="hidden lg:inline-flex items-center gap-2 bg-blue-600 text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity"
         >
           <PhoneIcon className="h-4 w-4" />
-          07399 539744
+          01924 910 133
         </a>
 
         {/* Mobile toggle */}
@@ -214,11 +214,11 @@ export default function Header() {
             ))}
 
             <a
-              href="tel:07399539744"
+              href="tel:+441924910133"
               className="mt-3 bg-blue-600 text-white px-4 py-3 rounded-lg text-sm font-semibold text-center hover:opacity-90 flex items-center justify-center gap-2"
             >
               <PhoneIcon className="h-4 w-4" />
-              Call 07399 539744
+              Call 01924 910 133
             </a>
           </div>
         </div>

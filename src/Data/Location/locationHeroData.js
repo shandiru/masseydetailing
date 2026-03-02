@@ -7,7 +7,7 @@ export const locationHeroData = {
     city: "Boroughbridge",
     description:
       "Serving Boroughbridge and the surrounding villages including Roecliffe, Aldborough, Minskip, and Green Hammerton. Our mobile detailing service comes directly to your home or workplace in the Boroughbridge area, offering convenience without compromise on quality.",
-    phone: "07399 539744",
+    phone: "01924 910 133",
     quoteLink: "/pricing",
     mapQuery: "Boroughbridge,North+Yorkshire,UK",
     mapZoom: 12,
@@ -19,7 +19,7 @@ export const locationHeroData = {
     city: "Harrogate",
     description:
       "Serving Harrogate and surrounding areas including Knaresborough, Ripon, and Pateley Bridge. Our mobile detailing service comes directly to your home or workplace, offering premium car care without the hassle.",
-    phone: "07399 539744",
+    phone: "01924 910 133",
     quoteLink: "/pricing",
     mapQuery: "Harrogate,North+Yorkshire,UK",
     mapZoom: 12,
@@ -31,7 +31,7 @@ export const locationHeroData = {
     city: "Thirsk",
     description:
       "Serving Thirsk and surrounding villages including Sowerby, Carlton Miniott, and Topcliffe. We bring our professional detailing service directly to your door across the Thirsk area.",
-    phone: "07399 539744",
+    phone: "01924 910 133",
     quoteLink: "/pricing",
     mapQuery: "Thirsk,North+Yorkshire,UK",
     mapZoom: 12,
@@ -43,7 +43,7 @@ export const locationHeroData = {
     city: "Leeds",
     description:
       "Serving Leeds and surrounding areas including Headingley, Roundhay, Moortown, and Chapel Allerton. Our mobile detailing team comes to your home or office across the Leeds area.",
-    phone: "07399 539744",
+    phone: "01924 910 133",
     quoteLink: "/pricing",
     mapQuery: "Leeds,West+Yorkshire,UK",
     mapZoom: 12,
@@ -55,7 +55,7 @@ export const locationHeroData = {
     city: "Garforth",
     description:
       "Serving Garforth and surrounding areas including Kippax, Swillington, and Micklefield. We provide professional mobile car detailing directly to your driveway or workplace.",
-    phone: "07399 539744",
+    phone: "01924 910 133",
     quoteLink: "/pricing",
     mapQuery: "Garforth,West+Yorkshire,UK",
     mapZoom: 13,
@@ -67,7 +67,7 @@ export const locationHeroData = {
     city: "Wakefield",
     description:
       "Serving Wakefield and surrounding areas including Ossett, Horbury, and Sandal. Our fully mobile car detailing service brings showroom-quality results directly to your door.",
-    phone: "07399 539744",
+    phone: "01924 910 133",
     quoteLink: "/pricing",
     mapQuery: "Wakefield,West+Yorkshire,UK",
     mapZoom: 12,

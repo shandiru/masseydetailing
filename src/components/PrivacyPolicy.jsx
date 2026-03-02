@@ -44,7 +44,7 @@ const PrivacyPolicy = () => {
                     </p>
                     <ul className="list-disc ml-6 text-white">
                         <li>Respond to inquiries and provide quotes</li>
-                        <li>Deliver scaffolding services</li>
+                        <li>Deliver Massey Detailing services</li>
                         <li>Communicate with you about your project</li>
                         <li>Maintain business records and comply with legal requirements</li>
                     </ul>
@@ -110,10 +110,10 @@ const PrivacyPolicy = () => {
                         If you have any questions about this Privacy Policy or how we handle your personal data, please contact us:
                     </p>
                     <div className="text-white">
-                         <p><strong>BOX FIT COACHING</strong></p>
-                          {/* <p>Email: <a href="mailto:afmok.performance@outlook.com" className="text-cyan-400 hover:underline">afmok.performance@outlook.com</a></p> */}
-                          <p>Phone: +44 7737163987</p>
-                          <p>69 Rea Street, Birmingham, B5 6BB, United Kingdom</p>
+                         <p><strong>Massey Detailing</strong></p>
+                          <p>Email: <a href="mailto:info@masseydetailing.co.uk" className="text-[#0052cc] hover:underline">info@masseydetailing.co.uk</a></p>
+                          <p>Phone: +44 1924 910133</p>
+                          {/* <p>69 Rea Street, Birmingham, B5 6BB, United Kingdom</p> */}
                     </div>
                     <p className="mt-2 text-white">
                         If you are not satisfied with our response, you have the right to lodge a complaint with the{' '}
@@ -121,7 +121,7 @@ const PrivacyPolicy = () => {
                             href="https://ico.org.uk/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-cyan-400 hover:underline"
+                            className="text-[#0052cc] hover:underline"
                         >
                             Information Commissioner’s Office (ICO)
                         </a>.

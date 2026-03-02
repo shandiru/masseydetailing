@@ -7,24 +7,24 @@ const Footer = () => {
       <div className="mx-auto max-w-7xl">
         {/* Top Grid Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          
+
           {/* Company Info */}
           <div>
             <div className="mb-6">
               {/* Replace with your actual logo image */}
-           <img
-            src="/logo.webp"
-            alt="Massey Detailing"
-            className="h-10 w-auto"
-          />
+              <img
+                src="/logo.webp"
+                alt="Massey Detailing"
+                className="h-10 w-auto"
+              />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
               Professional mobile car detailing across Yorkshire. We bring the showroom to your door.
             </p>
             <div className="space-y-3">
-              <a href="tel:07399539744" className="flex items-center gap-3 text-sm text-gray-400 hover:text-[#0052cc] transition-colors">
+              <a href="tel:+441924910133" className="flex items-center gap-3 text-sm text-gray-400 hover:text-[#0052cc] transition-colors">
                 <Phone size={16} className="text-[#0052cc]" />
-                07399 539744
+                01924 910 133
               </a>
               <a href="mailto:info@masseydetailing.co.uk" className="flex items-center gap-3 text-sm text-gray-400 hover:text-[#0052cc] transition-colors">
                 <Mail size={16} className="text-[#0052cc]" />
@@ -72,32 +72,32 @@ const Footer = () => {
           </div>
         </div>
 
-    
+
         {/* Bottom Bar */}
-<div className="mt-16 pt-8 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
-  
-  <p className="text-[10px] uppercase tracking-wider text-gray-500">
-    Powered by 
-    <a 
-      href="https://www.ansely.co.uk/" 
-      target="_blank" 
-      rel="noopener noreferrer"
-      className="ml-1 text-[#0052cc] transition"
-    >
-      Ansely
-    </a>
-  </p>
+        <div className="mt-16 pt-8 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
 
-  <div className="flex gap-4 text-[10px] uppercase tracking-wider text-gray-500">
-    <Link to="/terms-conditions" className=" hover:text-[#0052cc] transition">
-      Terms & Conditions
-    </Link>
-    <Link to="/privacy-policy" className=" hover:text-[#0052cc] transition">
-      Privacy Policy
-    </Link>
-  </div>
+          <p className="text-[10px] uppercase tracking-wider text-gray-500">
+            Powered by
+            <a
+              href="https://www.ansely.co.uk/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-1 text-[#0052cc] transition"
+            >
+              Ansely
+            </a>
+          </p>
 
-</div>
+          <div className="flex gap-4 text-[10px] uppercase tracking-wider text-gray-500">
+            <Link to="/terms-conditions" className=" hover:text-[#0052cc] transition">
+              Terms & Conditions
+            </Link>
+            <Link to="/privacy-policy" className=" hover:text-[#0052cc] transition">
+              Privacy Policy
+            </Link>
+          </div>
+
+        </div>
       </div>
     </footer>
   );

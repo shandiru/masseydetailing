@@ -46,11 +46,11 @@ const HeroSection = () => {
           {/* Buttons */}
           <div className="mt-8 flex flex-wrap gap-4">
             <a
-              href="tel:07399539744"
+              href="tel:+441924910133"
               className="inline-flex items-center gap-2 bg-blue-600 text-white px-7 py-3.5 rounded-xl text-sm font-semibold hover:bg-blue-700 transition"
             >
               <Phone size={16} />
-              07399 539744
+              01924 910 133
             </a>
 
             <a

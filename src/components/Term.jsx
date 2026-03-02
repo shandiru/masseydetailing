@@ -28,7 +28,7 @@ const TermsConditions = () => {
                   <section>
                       <h2 className="text-2xl font-medium">3. Intellectual Property</h2>
                       <p className="text-white">
-                          All content on this website (including text, images, graphics, and logos) is owned by or licensed to AF-MOK Performance.
+                          All content on this website (including text, images, graphics, and logos) is owned by or licensed to Massey Detailing.
                           You may view, download, and print content for personal use only.
                           You must not copy, reproduce, or distribute our website content without prior written consent.
                       </p>
@@ -77,10 +77,10 @@ const TermsConditions = () => {
                           If you have any questions about these Terms of Use, please contact us:
                       </p>
                       <div className="text-white">
-                          <p><strong>BOX FIT COACHING</strong></p>
-                          {/* <p>Email: <a href="mailto:afmok.performance@outlook.com" className="text-cyan-400 hover:underline">afmok.performance@outlook.com</a></p> */}
-                          <p>Phone: +44 7737163987</p>
-                          <p>69 Rea Street, Birmingham, B5 6BB, United Kingdom</p>
+                          <p><strong>Massey Detailing</strong></p>
+                           <p>Email: <a href="mailto:info@masseydetailing.co.uk" className="text-[#0052cc] hover:underline">info@masseydetailing.co.uk</a></p>
+                          <p>Phone: +44 1924 910133</p>
+                          {/* <p>69 Rea Street, Birmingham, B5 6BB, United Kingdom</p> */}
                       </div>
                   </section>
               </div>

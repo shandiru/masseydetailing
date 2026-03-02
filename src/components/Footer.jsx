@@ -1,6 +1,6 @@
 import React from 'react';
 import { Phone, Mail, MapPin } from 'lucide-react';
-
+import { Link } from 'react-router-dom';
 const Footer = () => {
   return (
     <footer className="bg-black text-white py-16 px-6 border-t border-zinc-900">
@@ -72,15 +72,32 @@ const Footer = () => {
           </div>
         </div>
 
+    
         {/* Bottom Bar */}
-        <div className="mt-16 pt-8 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
-          <p className="text-[10px] uppercase tracking-wider text-gray-500">
-            Massey Detailing. Professional mobile car detailing.
-          </p>
-          <p className="text-[10px] uppercase tracking-wider text-gray-500">
-            Covering Boroughbridge, Harrogate, Thirsk, Leeds, Garforth, Wakefield & everywhere in between.
-          </p>
-        </div>
+<div className="mt-16 pt-8 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+  
+  <p className="text-[10px] uppercase tracking-wider text-gray-500">
+    Powered by 
+    <a 
+      href="https://www.ansely.co.uk/" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="ml-1 text-[#0052cc] transition"
+    >
+      Ansely
+    </a>
+  </p>
+
+  <div className="flex gap-4 text-[10px] uppercase tracking-wider text-gray-500">
+    <Link to="/terms-conditions" className=" hover:text-[#0052cc] transition">
+      Terms & Conditions
+    </Link>
+    <Link to="/privacy-policy" className=" hover:text-[#0052cc] transition">
+      Privacy Policy
+    </Link>
+  </div>
+
+</div>
       </div>
     </footer>
   );

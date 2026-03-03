@@ -1,5 +1,6 @@
 import React from "react";
 import { allServices, exploreData } from "../../Data/Service/exploreData";
+import { Link } from "react-router-dom";
 
 function ArrowLeft() {
   return (
@@ -61,7 +62,7 @@ export default function ExploreOtherServices({ currentService }) {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {cards.map((service) => (
-            <a key={service.key} href={service.href} className="group block">
+            <Link key={service.key} to={service.href} className="group block">
               <div className="relative overflow-hidden rounded-2xl border border-white/10 h-48 hover:border-blue-600/40 transition-all duration-500">
 
                 {/* Image */}
@@ -107,7 +108,7 @@ export default function ExploreOtherServices({ currentService }) {
                 </div>
 
               </div>
-            </a>
+            </Link>
           ))}
         </div>
 

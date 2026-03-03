@@ -1,5 +1,6 @@
 // Common/Location/LocationCta.jsx
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function LocationCta({ data }) {
   const { heading, description, buttonText, buttonHref } = data;
@@ -17,8 +18,8 @@ export default function LocationCta({ data }) {
         </p>
 
         <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-          <a
-            href={buttonHref}
+          <Link
+            to={buttonHref}
             className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-xl text-sm font-semibold hover:bg-blue-700 transition-colors"
           >
             {buttonText}
@@ -36,7 +37,7 @@ export default function LocationCta({ data }) {
               <path d="M5 12h14" />
               <path d="m12 5 7 7-7 7" />
             </svg>
-          </a>
+          </Link>
         </div>
 
       </div>

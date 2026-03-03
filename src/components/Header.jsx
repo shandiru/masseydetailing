@@ -1,3 +1,4 @@
+import { Menu, X } from "lucide-react";
 import React, { useEffect, useRef, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 
@@ -8,13 +9,14 @@ const servicesLinks = [
   { label: "Full Detail", to: "/services/full-detail", fromPrice: "£400" },
 ];
 
+// Separated label into city and county for better styling control
 const locationLinks = [
-  { label: "Boroughbridge", to: "/locations/boroughbridge" },
-  { label: "Harrogate", to: "/locations/harrogate" },
-  { label: "Thirsk", to: "/locations/thirsk" },
-  { label: "Leeds", to: "/locations/leeds" },
-  { label: "Garforth", to: "/locations/garforth" },
-  { label: "Wakefield", to: "/locations/wakefield" },
+  { city: "Boroughbridge", county: "North Yorkshire", to: "/locations/boroughbridge" },
+  { city: "Harrogate", county: "North Yorkshire", to: "/locations/harrogate" },
+  { city: "Thirsk", county: "North Yorkshire", to: "/locations/thirsk" },
+  { city: "Leeds", county: "West Yorkshire", to: "/locations/leeds" },
+  { city: "Garforth", county: "West Yorkshire", to: "/locations/garforth" },
+  { city: "Wakefield", county: "West Yorkshire", to: "/locations/wakefield" },
 ];
 
 const ChevronDown = ({ className = "" }) => (
@@ -119,8 +121,8 @@ export default function Header() {
                     to={item.to}
                     className="flex items-center justify-between px-4 py-3 text-sm text-white hover:bg-white/10 transition-colors"
                   >
-                    <span>{item.label}</span>
-                    <span className="text-xs text-white/60">from {item.fromPrice}</span>
+                    <span>{item.label}  <span className="text-xs text-white/60">from {item.fromPrice}</span> </span>
+
                   </Link>
                 ))}
               </div>
@@ -142,14 +144,14 @@ export default function Header() {
             </button>
 
             {locationsOpen && (
-              <div className="absolute left-0 mt-2 w-64 rounded-xl border border-white/10 bg-black shadow-lg overflow-hidden">
+              <div className="absolute left-0 mt-2 w-72 rounded-xl border border-white/10 bg-black shadow-lg overflow-hidden">
                 {locationLinks.map((item) => (
                   <Link
                     key={item.to}
                     to={item.to}
-                    className="block px-4 py-3 text-sm text-white hover:bg-white/10 transition-colors"
+                    className="flex flex-col px-4 py-3 hover:bg-white/10 transition-colors"
                   >
-                    {item.label}
+                    <span className="text-sm text-white font-medium">{item.city}  <span className="text-[13px] text-white/40 font-normal leading-tight">{item.county}</span> </span>
                   </Link>
                 ))}
               </div>
@@ -161,27 +163,31 @@ export default function Header() {
 
         {/* Call button */}
         <a
-          href="tel:+441924910133"
+          href="tel:+447399539744"
           className="hidden lg:inline-flex items-center gap-2 bg-blue-600 text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity"
         >
           <PhoneIcon className="h-4 w-4" />
-          01924 910 133
+          07399 539744
         </a>
 
         {/* Mobile toggle */}
         <button
-          className="lg:hidden text-white p-2"
+          className="lg:hidden text-white p-2 transition-colors hover:bg-white/10 rounded-lg"
           onClick={() => setMobileOpen((v) => !v)}
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
         >
-          {mobileOpen ? "✕" : "☰"}
+          {mobileOpen ? (
+            <X className="h-6 w-6 animate-in fade-in zoom-in duration-200" />
+          ) : (
+            <Menu className="h-6 w-6 animate-in fade-in zoom-in duration-200" />
+          )}
         </button>
       </div>
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="lg:hidden bg-black border-t border-white/10">
-          <div className="px-6 py-4 flex flex-col gap-1">
+        <div className="lg:hidden bg-black border-t border-white/10 h-screen overflow-y-auto">
+          <div className="px-6 py-4 flex flex-col gap-1 pb-20">
             <Link className="px-3 py-3 rounded-lg text-white hover:bg-white/10" to="/">Home</Link>
 
             <div className="px-3 py-2 text-xs font-semibold text-white/60 uppercase tracking-wider">
@@ -194,8 +200,8 @@ export default function Header() {
                 to={item.to}
                 className="px-3 py-2.5 rounded-lg text-sm text-white hover:bg-white/10 ml-2 flex items-center justify-between"
               >
-                <span>{item.label}</span>
-                <span className="text-white/60 text-xs">from {item.fromPrice}</span>
+                <span>{item.label} <span className="text-white/60 text-xs">from {item.fromPrice}</span></span>
+
               </Link>
             ))}
 
@@ -207,18 +213,19 @@ export default function Header() {
               <Link
                 key={item.to}
                 to={item.to}
-                className="px-3 py-2.5 rounded-lg text-sm text-white hover:bg-white/10 ml-2"
+                className="px-3 py-2.5 rounded-lg ml-2 flex flex-col hover:bg-white/10"
               >
-                {item.label}
+                <span className="text-sm text-white font-medium">{item.city} <span className="text-[11px] text-white/40 font-normal leading-tight">{item.county}</span></span>
+
               </Link>
             ))}
 
             <a
-              href="tel:+441924910133"
-              className="mt-3 bg-blue-600 text-white px-4 py-3 rounded-lg text-sm font-semibold text-center hover:opacity-90 flex items-center justify-center gap-2"
+              href="tel:+447399539744"
+              className="mt-4 bg-blue-600 text-white px-4 py-3 rounded-lg text-sm font-semibold text-center hover:opacity-90 flex items-center justify-center gap-2"
             >
               <PhoneIcon className="h-4 w-4" />
-              Call 01924 910 133
+              Call 07399 539744
             </a>
           </div>
         </div>

@@ -25,7 +25,7 @@ const HeroSection = () => {
         <div className="max-w-2xl">
 
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-blue-600/10 border border-blue-600/20 rounded-full px-4 py-1.5 text-sm text-blue-500 mb-6">
+          <div className="inline-flex mt-20 items-center gap-2 bg-blue-600/10 border border-blue-600/20 rounded-full px-4 py-1.5 text-sm text-blue-500 mb-6">
             <Shield size={14} />
             Massey Detailing - Professional Mobile Service
           </div>
@@ -46,11 +46,11 @@ const HeroSection = () => {
           {/* Buttons */}
           <div className="mt-8 flex flex-wrap gap-4">
             <a
-              href="tel:+441924910133"
+              href="tel:+447399539744"
               className="inline-flex items-center gap-2 bg-blue-600 text-white px-7 py-3.5 rounded-xl text-sm font-semibold hover:bg-blue-700 transition"
             >
               <Phone size={16} />
-              01924 910 133
+              07399 539744
             </a>
 
             <a

@@ -1,5 +1,6 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -61,9 +62,9 @@ const ServicesSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
           {services.map((service, index) => (
-            <a
+            <Link
               key={index}
-              href={service.link}
+              to={service.link}
               className="group block"
             >
               <div className="relative overflow-hidden rounded-2xl border border-gray-800 bg-gray-900 h-80 transition-all duration-500 hover:border-blue-500/40 hover:shadow-lg hover:shadow-blue-500/10">
@@ -105,7 +106,7 @@ const ServicesSection = () => {
                 </div>
 
               </div>
-            </a>
+            </Link>
           ))}
 
         </div>

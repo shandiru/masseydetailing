@@ -1,5 +1,6 @@
 // Common/Location/LocationOtherAreas.jsx
 import React from "react";
+import { Link } from "react-router-dom";
 
 function MapPinIcon() {
   return (
@@ -50,7 +51,7 @@ export default function LocationOtherAreas({ data }) {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {data.map((location) => (
-            <a key={location.href} href={location.href} className="group block">
+            <Link key={location.href} to={location.href} className="group block">
               <div className="flex items-center gap-4 p-4 rounded-xl border border-white/10 bg-white/5 hover:border-blue-600/40 transition-all duration-300">
 
                 {/* Icon */}
@@ -68,7 +69,7 @@ export default function LocationOtherAreas({ data }) {
                 <ArrowRightIcon />
 
               </div>
-            </a>
+            </Link>
           ))}
         </div>
 

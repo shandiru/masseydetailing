@@ -1,5 +1,6 @@
 // Common/Pricing/PricingCards.jsx
 import React from "react";
+import { Link } from "react-router-dom";
 
 const PLANS = [
   {
@@ -164,14 +165,14 @@ export default function PricingCards() {
                   </ul>
 
                   {/* CTA */}
-                  <a href={plan.href}
+                  <Link to={plan.href}
                     className={`mt-6 flex items-center justify-center gap-2 rounded-xl py-3 text-sm font-semibold transition-all ${
                       plan.popular
                         ? "bg-blue-600 text-white hover:bg-blue-700"
                         : "bg-white/10 text-white hover:bg-blue-600 hover:text-white"
                     }`}>
                     View Details <IconArrowRight />
-                  </a>
+                  </Link>
 
                 </div>
               </div>

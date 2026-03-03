@@ -1,5 +1,6 @@
 import React from 'react';
 import { Phone, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const ShowroomCTA = () => {
   return (
@@ -20,21 +21,21 @@ const ShowroomCTA = () => {
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             {/* Blue Call Button (Primary) */}
             <a 
-              href="tel:+441924910133" 
+              href="tel:+447399539744" 
               className="inline-flex items-center gap-2 bg-[#0052cc] text-white px-8 py-4 rounded-xl text-sm font-semibold hover:bg-[#0047b3] transition-colors"
             >
               <Phone size={18} />
-              Call 01924 910 133
+              Call 07399 539744
             </a>
 
             {/* Dark Grey Pricing Button (Secondary) */}
-            <a 
-              href="/pricing"
+            <Link 
+              to="/pricing"
               className="inline-flex items-center gap-2 bg-[#121212] text-gray-300 border border-gray-800 px-8 py-4 rounded-xl text-sm font-semibold hover:bg-[#1a1a1a] transition-colors"
             >
               View Pricing 
               <ArrowRight size={18} />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -4,7 +4,7 @@ import { Phone, ArrowRight, Shield, Star } from "lucide-react";
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
-      
+
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
@@ -52,6 +52,13 @@ const HeroSection = () => {
               <Phone size={16} />
               07399 539744
             </a>
+            <a
+              href="tel:+441924911544"
+              className="inline-flex items-center gap-2 bg-blue-600 text-white px-7 py-3.5 rounded-xl text-sm font-semibold hover:bg-blue-700 transition"
+            >
+              <Phone size={16} />
+              01924 911544
+            </a>
 
             <a
               href="/pricing"
@@ -64,7 +71,7 @@ const HeroSection = () => {
 
           {/* Trust Section */}
           <div className="mt-10 flex items-center gap-4 text-sm text-gray-400">
-            
+
             {/* Initial Avatars */}
             <div className="flex -space-x-2">
               {["JW", "ST", "MR", "LH", "PD"].map((item, index) => (

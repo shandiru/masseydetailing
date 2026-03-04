@@ -26,6 +26,10 @@ const Footer = () => {
                 <Phone size={16} className="text-[#0052cc]" />
                 07399 539744
               </a>
+              <a href="tel:+441924911544" className="flex items-center gap-3 text-sm text-gray-400 hover:text-[#0052cc] transition-colors">
+                <Phone size={16} className="text-[#0052cc]" />
+                01924 911544
+              </a>
               <a href="mailto:info@masseydetailing.co.uk" className="flex items-center gap-3 text-sm text-gray-400 hover:text-[#0052cc] transition-colors">
                 <Mail size={16} className="text-[#0052cc]" />
                 info@masseydetailing.co.uk

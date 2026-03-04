@@ -10,11 +10,13 @@ import LocationOtherAreas from "../../Common/Location/LocationOtherAreas";
 import LocationCta from "../../Common/Location/LocationCta";
 import { locationOtherAreasData } from "../../Data/Location/locationOtherAreasData";
 import { locationCtaData } from "../../Data/Location/locationCtaData";
+import LeedsMapSection from "../../components/Location/LeedsMap";
 const Leeds = () => {
     return (
         <main className="bg-black min-h-screen">
             <LocationHero data={locationHeroData["leeds"]} />
             <LocationServices data={locationServicesData["leeds"]} />
+            <LeedsMapSection />
             <LocationFaq data={locationFaqData["leeds"]} />
             <LocationOtherAreas data={locationOtherAreasData["leeds"]} />
             <LocationCta data={locationCtaData["leeds"]} />

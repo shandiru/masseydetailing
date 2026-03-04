@@ -10,11 +10,13 @@ import LocationOtherAreas from "../../Common/Location/LocationOtherAreas";
 import LocationCta from "../../Common/Location/LocationCta";
 import { locationOtherAreasData } from "../../Data/Location/locationOtherAreasData";
 import { locationCtaData } from "../../Data/Location/locationCtaData";
+import GarforthMapSection from "../../components/Location/GarforthMap";
 const Garforth = () => {
     return (
         <main className="bg-black min-h-screen">
             <LocationHero data={locationHeroData["garforth"]} />
             <LocationServices data={locationServicesData["garforth"]} />
+            <GarforthMapSection />
             <LocationFaq data={locationFaqData["garforth"]} />
             <LocationOtherAreas data={locationOtherAreasData["garforth"]} />
             <LocationCta data={locationCtaData["garforth"]} />

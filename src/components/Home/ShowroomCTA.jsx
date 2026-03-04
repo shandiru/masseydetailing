@@ -11,29 +11,36 @@ const ShowroomCTA = () => {
           <h2 className="text-3xl sm:text-4xl font-bold text-white text-balance">
             Ready for a showroom finish?
           </h2>
-          
+
           {/* Subtext - Using a muted grey for readability on black */}
           <p className="mt-4 text-gray-400 text-lg leading-relaxed">
-            Get in touch today and let us transform your vehicle. We cover Boroughbridge, 
+            Get in touch today and let us transform your vehicle. We cover Boroughbridge,
             Harrogate, Thirsk, Leeds, Garforth, Wakefield and everywhere in between.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             {/* Blue Call Button (Primary) */}
-            <a 
-              href="tel:+447399539744" 
+            <a
+              href="tel:+447399539744"
               className="inline-flex items-center gap-2 bg-[#0052cc] text-white px-8 py-4 rounded-xl text-sm font-semibold hover:bg-[#0047b3] transition-colors"
             >
               <Phone size={18} />
               Call 07399 539744
             </a>
+            <a
+              href="tel:+441924911544"
+              className="inline-flex items-center gap-2 bg-[#0052cc] text-white px-8 py-4 rounded-xl text-sm font-semibold hover:bg-[#0047b3] transition-colors"
+            >
+              <Phone size={18} />
+              Call 01924 911544  
+            </a>
 
             {/* Dark Grey Pricing Button (Secondary) */}
-            <Link 
+            <Link
               to="/pricing"
               className="inline-flex items-center gap-2 bg-[#121212] text-gray-300 border border-gray-800 px-8 py-4 rounded-xl text-sm font-semibold hover:bg-[#1a1a1a] transition-colors"
             >
-              View Pricing 
+              View Pricing
               <ArrowRight size={18} />
             </Link>
           </div>

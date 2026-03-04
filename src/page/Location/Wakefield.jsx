@@ -10,11 +10,13 @@ import LocationOtherAreas from "../../Common/Location/LocationOtherAreas";
 import LocationCta from "../../Common/Location/LocationCta";
 import { locationOtherAreasData } from "../../Data/Location/locationOtherAreasData";
 import { locationCtaData } from "../../Data/Location/locationCtaData";
+import WakefieldMapSection from "../../components/Location/WakefieldMap";
 const Wakefield = () => {
     return (
         <main className="bg-black min-h-screen">
             <LocationHero data={locationHeroData["wakefield"]} />
             <LocationServices data={locationServicesData["wakefield"]} />
+            <WakefieldMapSection />
             <LocationFaq data={locationFaqData["wakefield"]} />
             <LocationOtherAreas data={locationOtherAreasData["wakefield"]} />
             <LocationCta data={locationCtaData["wakefield"]} />

@@ -83,7 +83,7 @@ export default function Header() {
   return (
     <header
       ref={headerRef}
-      className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-xl border-b border-white/10"
+      className="fixed z-9999 top-0 left-0 right-0 bg-black/80 backdrop-blur-xl border-b border-white/10"
     >
       <div className="mx-auto max-w-7xl flex items-center justify-between px-6 py-4">
         {/* Logo */}
@@ -169,6 +169,7 @@ export default function Header() {
           <PhoneIcon className="h-4 w-4" />
           07399 539744
         </a>
+        
 
         {/* Mobile toggle */}
         <button

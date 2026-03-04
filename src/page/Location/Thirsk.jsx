@@ -10,11 +10,14 @@ import LocationOtherAreas from "../../Common/Location/LocationOtherAreas";
 import LocationCta from "../../Common/Location/LocationCta";
 import { locationOtherAreasData } from "../../Data/Location/locationOtherAreasData";
 import { locationCtaData } from "../../Data/Location/locationCtaData";
+import ThirskMapSection from "../../components/Location/ThirskMap";
+
 const Thirsk = () => {
     return (
         <main className="bg-black min-h-screen">
             <LocationHero data={locationHeroData["thirsk"]} />
             <LocationServices data={locationServicesData["thirsk"]} />
+            <ThirskMapSection />
             <LocationFaq data={locationFaqData["thirsk"]} />
             <LocationOtherAreas data={locationOtherAreasData["thirsk"]} />
             <LocationCta data={locationCtaData["thirsk"]} />

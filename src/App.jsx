@@ -19,6 +19,7 @@ import Leeds from "./page/Location/Leeds";
 import Thirsk from "./page/Location/Thirsk";
 import Wakefield from "./page/Location/Wakefield";
 import PricingPage from "./page/PricingPage";
+import BookingTerms from "./page/T&C";
 function App() {
   return (
     <Router>
@@ -42,9 +43,7 @@ function App() {
         <Route path="/locations/wakefield" element={<Wakefield />} />
 
         <Route path="/pricing" element={<PricingPage />} />
-
-
-
+        <Route path="/tcs" element={<BookingTerms /> } />
 
         <Route path="/terms-conditions" element={<TermsConditions />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />

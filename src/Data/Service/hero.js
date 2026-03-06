@@ -16,7 +16,7 @@ export const servicesData = {
 
   "full-valet": {
     title: "Full Valet",
-    price: "100",
+    price: "120",
     duration: "3-4 hours",
     backgroundImage: "/full-valet.jpg",
 

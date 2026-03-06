@@ -10,7 +10,7 @@ export const allServices = [
   {
     key: "full-valet",
     title: "Full Valet",
-    price: "from £100",
+    price: "from £120",
     image: " /full-valet.jpg",
     href: "/services/full-valet",
   },

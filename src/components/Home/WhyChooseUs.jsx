@@ -1,5 +1,5 @@
 import React from "react";
-import { Clock, Shield, Award } from "lucide-react";
+import { Clock, Shield, Award, Warehouse } from "lucide-react"; // Added Warehouse icon
 
 const features = [
   {
@@ -20,6 +20,13 @@ const features = [
     description:
       "Fully insured with years of experience detailing everything from family cars to supercars.",
   },
+  /* New Unit Available Box */
+  {
+    icon: Warehouse,
+    title: "Unit Available",
+    description:
+      "While we are primarily mobile, a secure detailing unit is available upon request for larger or specialized projects.",
+  },
 ];
 
 const WhyChooseUsSection = () => {
@@ -30,7 +37,6 @@ const WhyChooseUsSection = () => {
 
         {/* Heading Section */}
         <div className="text-center mb-16">
-          {/* Section subtitle in Blue */}
           <span className="text-sm font-semibold text-blue-600 uppercase tracking-wider">
             Why Choose Us
           </span>
@@ -40,8 +46,8 @@ const WhyChooseUsSection = () => {
           </h2>
         </div>
 
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Features Grid - Updated to grid-cols-4 for large screens */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
           {features.map((feature, index) => {
             const Icon = feature.icon;
@@ -49,7 +55,6 @@ const WhyChooseUsSection = () => {
             return (
               <div
                 key={index}
-                /* Border and Background adjusted for exact image match */
                 className="group p-8 rounded-2xl border border-white/5 bg-[#0A0A0A] hover:border-blue-600/40 hover:bg-blue-600/5 transition-all duration-500"
               >
                 {/* Icon Container with subtle blue glow */}

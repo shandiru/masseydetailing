@@ -25,7 +25,7 @@ const PLANS = [
     key: "full-valet",
     title: "Full Valet",
     description: "A comprehensive clean inside and out for a showroom finish.",
-    price: "£100",
+    price: "£120",
     duration: "3-4 hours",
     popular: false,
     features: [
@@ -70,7 +70,7 @@ const PLANS = [
       "Multi-stage machine polish",
       "Swirl mark & scratch removal",
       "Paint depth gauge readings",
-      "Ceramic coating application (up to 2yr protection)",
+      "Ceramic coating application (up to 10yr protection)",
       "Paint decontamination & clay bar",
       "Glass sealant application",
       "Alloy wheel sealant",

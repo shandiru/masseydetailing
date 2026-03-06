@@ -15,7 +15,7 @@ const services = [
     title: "Full Valet",
     description:
       "A comprehensive clean inside and out for a showroom finish.",
-    price: "100",
+    price: "120",
     image: "/full-valet.jpg",
     link: "/services/full-valet",
   },

@@ -4,7 +4,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 
 const servicesLinks = [
   { label: "Maintenance Scheme", to: "/services/maintenance-scheme", fromPrice: "£70" },
-  { label: "Full Valet", to: "/services/full-valet", fromPrice: "£100" },
+  { label: "Full Valet", to: "/services/full-valet", fromPrice: "£120" },
   { label: "Deep Clean", to: "/services/deep-clean", fromPrice: "£175" },
   { label: "Full Detail", to: "/services/full-detail", fromPrice: "£400" },
 ];
@@ -159,6 +159,7 @@ export default function Header() {
           </div>
 
           <NavLink to="/pricing" className={navLinkClass}>Pricing</NavLink>
+          <NavLink to="/tcs" className={navLinkClass}>T&C's</NavLink>
         </nav>
 
         {/* Call button */}
@@ -232,6 +233,7 @@ export default function Header() {
             </div>
 
             <NavLink to="/pricing" className="px-3 py-3 rounded-lg text-white hover:bg-white/10">Pricing</NavLink>
+            <NavLink to="/tcs" className="px-3 py-3 rounded-lg text-white hover:bg-white/10">T&C's</NavLink>
 
             <a
               href="tel:+447399539744"

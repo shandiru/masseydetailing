@@ -63,10 +63,6 @@ export default function PricingGoodToKnow() {
               className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-xl text-sm font-semibold hover:bg-blue-700 transition-colors">
               <IconPhone /> Call 07399 539744
             </a>
-             <a href="tel:+441924911544"
-              className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-xl text-sm font-semibold hover:bg-blue-700 transition-colors">
-              <IconPhone /> Call 01924 911544
-            </a>
             <div className="flex items-center gap-2 text-sm text-white/60">
               <IconMapPin /> Covering all of Yorkshire
             </div>

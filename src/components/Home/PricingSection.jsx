@@ -21,7 +21,7 @@ const plans = [
   {
     title: "Full Valet",
     description: "A comprehensive clean inside and out for a showroom finish.",
-    price: 100,
+    price: 120,
     duration: "3-4 hours",
     features: [
       "Everything in Maintenance Scheme",
@@ -59,7 +59,7 @@ const plans = [
       "Multi-stage machine polish",
       "Swirl mark & scratch removal",
       "Paint depth gauge readings",
-      "Ceramic coating application (up to 2yr protection)",
+      "Ceramic coating application (up to 10yr protection)",
     ],
     more: 4,
     link: "/services/full-detail",

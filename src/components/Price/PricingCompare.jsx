@@ -3,7 +3,7 @@ import React from "react";
 
 const COLUMNS = [
   { label: "Maintenance", price: "from £70"  },
-  { label: "Full Valet",  price: "from £100" },
+  { label: "Full Valet",  price: "from £120" },
   { label: "Deep Clean",  price: "from £175" },
   { label: "Full Detail", price: "from £400" },
 ];

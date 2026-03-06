@@ -52,13 +52,6 @@ const HeroSection = () => {
               <Phone size={16} />
               07399 539744
             </a>
-            <a
-              href="tel:+441924911544"
-              className="inline-flex items-center gap-2 bg-blue-600 text-white px-7 py-3.5 rounded-xl text-sm font-semibold hover:bg-blue-700 transition"
-            >
-              <Phone size={16} />
-              01924 911544
-            </a>
 
             <a
               href="/pricing"
@@ -68,37 +61,6 @@ const HeroSection = () => {
               <ArrowRight size={16} />
             </a>
           </div>
-
-          {/* Trust Section */}
-          <div className="mt-10 flex items-center gap-4 text-sm text-gray-400">
-
-            {/* Initial Avatars */}
-            <div className="flex -space-x-2">
-              {["JW", "ST", "MR", "LH", "PD"].map((item, index) => (
-                <div
-                  key={index}
-                  className="h-8 w-8 rounded-full  border-2 border-black flex items-center justify-center text-xs font-bold text-white"
-                >
-                  {item}
-                </div>
-              ))}
-            </div>
-
-            {/* Rating */}
-            <div className="flex flex-col">
-              <div className="flex items-center gap-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    size={14}
-                    className="fill-blue-500 text-blue-500"
-                  />
-                ))}
-              </div>
-              <span>Trusted by 1,800+ customers</span>
-            </div>
-          </div>
-
         </div>
       </div>
     </section>

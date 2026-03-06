@@ -1,5 +1,6 @@
 // Common/Location/LocationHero.jsx
 import React from "react";
+import { Link } from "react-router-dom";
 
 const MAPS_API_KEY = "AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8";
 
@@ -75,8 +76,8 @@ export default function LocationHero({ data }) {
 
             {/* CTAs */}
             <div className="mt-8 flex flex-wrap gap-4">
-              <a
-                href={quoteLink}
+              <Link
+                to={quoteLink}
                 className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-xl text-sm font-semibold hover:bg-blue-700 transition-colors"
               >
                 Get a Quote
@@ -86,7 +87,7 @@ export default function LocationHero({ data }) {
                   <path d="M5 12h14" />
                   <path d="m12 5 7 7-7 7" />
                 </svg>
-              </a>
+              </Link>
               <a
                 href={`tel:${phone.replace(/\s/g, "")}`}
                 className="inline-flex items-center gap-2 bg-white/10 text-white px-6 py-3 rounded-xl text-sm font-semibold hover:bg-white/15 transition-colors"

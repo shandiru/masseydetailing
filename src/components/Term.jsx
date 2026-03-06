@@ -79,8 +79,7 @@ const TermsConditions = () => {
                       <div className="text-white">
                           <p><strong>Massey Detailing</strong></p>
                            <p>Email: <a href="mailto:info@masseydetailing.co.uk" className="text-[#0052cc] hover:underline">info@masseydetailing.co.uk</a></p>
-                          <p>Phone: +44 1924 910133</p>
-                          {/* <p>69 Rea Street, Birmingham, B5 6BB, United Kingdom</p> */}
+                          <p>Phone: 07399 539744</p>
                       </div>
                   </section>
               </div>

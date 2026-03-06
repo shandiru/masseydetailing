@@ -44,7 +44,6 @@ const PrivacyPolicy = () => {
                     </p>
                     <ul className="list-disc ml-6 text-white">
                         <li>Respond to inquiries and provide quotes</li>
-                        <li>Deliver Massey Detailing services</li>
                         <li>Communicate with you about your project</li>
                         <li>Maintain business records and comply with legal requirements</li>
                     </ul>
@@ -112,8 +111,7 @@ const PrivacyPolicy = () => {
                     <div className="text-white">
                          <p><strong>Massey Detailing</strong></p>
                           <p>Email: <a href="mailto:info@masseydetailing.co.uk" className="text-[#0052cc] hover:underline">info@masseydetailing.co.uk</a></p>
-                          <p>Phone: +44 1924 910133</p>
-                          {/* <p>69 Rea Street, Birmingham, B5 6BB, United Kingdom</p> */}
+                          <p>Phone: 07399 539744</p>
                     </div>
                     <p className="mt-2 text-white">
                         If you are not satisfied with our response, you have the right to lodge a complaint with the{' '}

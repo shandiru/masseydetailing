@@ -1,5 +1,6 @@
 // Common/Location/LocationServices.jsx
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function LocationServices({ data }) {
   const { city, services } = data;
@@ -24,7 +25,7 @@ export default function LocationServices({ data }) {
         {/* Cards grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
           {services.map((service) => (
-            <a key={service.key} href={service.href} className="group block h-full">
+            <Link key={service.key} to={service.href} className="group block h-full">
               <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 h-full transition-all duration-500 hover:border-blue-600/40 hover:shadow-lg hover:shadow-blue-600/5">
 
                 {/* Image */}
@@ -60,7 +61,7 @@ export default function LocationServices({ data }) {
                 </div>
 
               </div>
-            </a>
+            </Link>
           ))}
         </div>
 

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 function IconCheck(props) {
   return (
@@ -125,9 +126,8 @@ export default function ServiceDetailsSection({ data }) {
               >
                 {showAll ? "Show less" : `Show all ${includedItems.length} items`}
                 <IconChevronDown
-                  className={`h-4 w-4 transition-transform ${
-                    showAll ? "rotate-180" : ""
-                  }`}
+                  className={`h-4 w-4 transition-transform ${showAll ? "rotate-180" : ""
+                    }`}
                 />
               </button>
             </div>
@@ -163,36 +163,32 @@ export default function ServiceDetailsSection({ data }) {
                     </span>
                   </div>
                 </div>
-                <a
-                  href={quoteLink}
+                <Link
+                  to={quoteLink}
                   className="mt-6 w-full inline-flex items-center justify-center gap-2 bg-blue-600 text-white py-3.5 rounded-xl text-sm font-semibold hover:bg-blue-700 transition-colors"
                 >
                   Get a Quote <IconArrowRight className="h-4 w-4" />
-                </a>
+                </Link>
               </div>
-              {/* END Price Card */}
 
               {/* Locations Card */}
               <div className="mt-6 rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">
                 <h4 className="text-sm font-semibold mb-4">Available In</h4>
                 <div className="flex flex-wrap gap-2">
                   {locations.map((loc) => (
-                    <a
+                    <Link
                       key={loc.href}
-                      href={loc.href}
+                      to={loc.href}
                       className="inline-flex items-center px-3 py-1.5 rounded-lg bg-white/10 text-white/80 text-xs font-medium hover:bg-blue-600 hover:text-white transition-colors"
                     >
                       {loc.label}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </div>
-              {/* END Locations Card */}
 
             </div>
-            {/* END sticky */}
           </div>
-          {/* END RIGHT */}
 
         </div>
       </div>

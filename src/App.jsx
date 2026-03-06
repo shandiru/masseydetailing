@@ -1,6 +1,6 @@
 
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import Footer from "./components/Footer";
 import TermsConditions from "./components/Term";
 import Home from "./page/Home";

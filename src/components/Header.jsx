@@ -169,7 +169,7 @@ export default function Header() {
           <PhoneIcon className="h-4 w-4" />
           07399 539744
         </a>
-        
+
 
         {/* Mobile toggle */}
         <button
@@ -191,35 +191,47 @@ export default function Header() {
           <div className="px-6 py-4 flex flex-col gap-1 pb-20">
             <Link className="px-3 py-3 rounded-lg text-white hover:bg-white/10" to="/">Home</Link>
 
-            <div className="px-3 py-2 text-xs font-semibold text-white/60 uppercase tracking-wider">
-              Services
+            {/* Services Dropdown in Mobile */}
+            <div className="flex flex-col">
+              <button
+                onClick={() => { setServicesOpen(!servicesOpen); setLocationsOpen(false); }}
+                className="flex items-center justify-between px-3 py-3 rounded-lg text-white hover:bg-white/10 w-full text-left"
+              >
+                Services
+                <ChevronDown className={`h-4 w-4 transition-transform ${servicesOpen ? "rotate-180" : ""}`} />
+              </button>
+              {servicesOpen && (
+                <div className="flex flex-col gap-1 mb-2">
+                  {servicesLinks.map((item) => (
+                    <Link key={item.to} to={item.to} className="px-3 py-3 rounded-lg text-sm text-white/70 hover:bg-white/5 ml-4 border-l border-white/10">
+                      {item.label} <span className="text-white/40 text-xs">- {item.fromPrice}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
             </div>
 
-            {servicesLinks.map((item) => (
-              <Link
-                key={item.to}
-                to={item.to}
-                className="px-3 py-2.5 rounded-lg text-sm text-white hover:bg-white/10 ml-2 flex items-center justify-between"
+            {/* Locations Dropdown in Mobile */}
+            <div className="flex flex-col">
+              <button
+                onClick={() => { setLocationsOpen(!locationsOpen); setServicesOpen(false); }}
+                className="flex items-center justify-between px-3 py-3 rounded-lg text-white hover:bg-white/10 w-full text-left"
               >
-                <span>{item.label} <span className="text-white/60 text-xs">from {item.fromPrice}</span></span>
-
-              </Link>
-            ))}
-
-            <div className="px-3 py-2 text-xs font-semibold text-white/60 uppercase tracking-wider mt-2">
-              Locations
+                Locations
+                <ChevronDown className={`h-4 w-4 transition-transform ${locationsOpen ? "rotate-180" : ""}`} />
+              </button>
+              {locationsOpen && (
+                <div className="flex flex-col gap-1 mb-2">
+                  {locationLinks.map((item) => (
+                    <Link key={item.to} to={item.to} className="px-3 py-3 rounded-lg text-sm text-white/70 hover:bg-white/5 ml-4 border-l border-white/10">
+                      {item.city} <span className="text-xs text-white/40">{item.county}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
             </div>
 
-            {locationLinks.map((item) => (
-              <Link
-                key={item.to}
-                to={item.to}
-                className="px-3 py-2.5 rounded-lg ml-2 flex flex-col hover:bg-white/10"
-              >
-                <span className="text-sm text-white font-medium">{item.city} <span className="text-[11px] text-white/40 font-normal leading-tight">{item.county}</span></span>
-
-              </Link>
-            ))}
+            <NavLink to="/pricing" className="px-3 py-3 rounded-lg text-white hover:bg-white/10">Pricing</NavLink>
 
             <a
               href="tel:+447399539744"

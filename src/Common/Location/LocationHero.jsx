@@ -27,14 +27,14 @@ export default function LocationHero({ data }) {
       <div className="relative mx-auto max-w-7xl px-6">
 
         {/* Breadcrumb */}
-        <div className="flex items-center gap-2 text-sm text-white/50 mb-6">
+        <div className="flex items-center gap-2 text-sm text-white/50 mb-6 pt-15">
           {breadcrumb.map((crumb, i) => (
             <React.Fragment key={crumb}>
               {i < breadcrumb.length - 1 ? (
                 <>
-                  <a href={i === 0 ? "/" : `/locations`} className="hover:text-blue-500 transition-colors">
+                  <Link to={i === 0 ? "/" : `/`} className="hover:text-blue-500 transition-colors">
                     {crumb}
-                  </a>
+                  </Link>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" strokeWidth="2" strokeLinecap="round"
                     strokeLinejoin="round" className="h-3.5 w-3.5" aria-hidden="true">

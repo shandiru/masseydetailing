@@ -57,13 +57,23 @@ const Footer = () => {
           <div>
             <h3 className="text-sm font-bold uppercase tracking-widest mb-6">Services</h3>
             <ul className="space-y-3">
-              {['Maintenance Scheme', 'Full Valet', 'Deep Clean', 'Full Detail'].map((item) => (
-                <li key={item}>
-                  <Link to={`/services/${item.toLowerCase().replace(' ', '-')}`} className="text-sm text-gray-400 hover:text-[#0052cc] transition-colors">
-                    {item}
-                  </Link>
-                </li>
-              ))}
+              {['Maintenance Scheme', 'Full Valet', 'Deep Clean', '7 Year Ceramic'].map((item) => {
+                // If it's the ceramic service, keep spaces (will encode to %20); otherwise, use hyphens
+                const urlPath = item === '7 Year Ceramic'
+                  ? encodeURIComponent(item)
+                  : item.toLowerCase().replace(/\s+/g, '-');
+
+                return (
+                  <li key={item}>
+                    <Link
+                      to={`/services/${urlPath}`}
+                      className="text-sm text-gray-400 hover:text-[#0052cc] transition-colors"
+                    >
+                      {item}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 

@@ -59,9 +59,9 @@ const PLANS = [
     href: "/services/deep-clean",
   },
   {
-    key: "full-detail",
-    title: "Full Detail",
-    description: "Machine polish & ceramic coating for the ultimate finish.",
+    key: "7 Year Ceramic",
+    title: "7 Year Ceramic",
+    description: "Machine polish & 7-year ceramic coating for the ultimate, lasting finish.",
     price: "£400",
     duration: "1-2 days",
     popular: true,
@@ -70,13 +70,9 @@ const PLANS = [
       "Multi-stage machine polish",
       "Swirl mark & scratch removal",
       "Paint depth gauge readings",
-      "Ceramic coating application (up to 10yr protection)",
-      "Paint decontamination & clay bar",
-      "Glass sealant application",
-      "Alloy wheel sealant",
-      "Full condition report provided",
+      "Ceramic coating application (7-year protection)",
     ],
-    href: "/services/full-detail",
+    href: "/services/7 Year Ceramic",
   },
 ];
 
@@ -121,11 +117,10 @@ export default function PricingCards() {
             const extra = plan.features.length - PREVIEW_COUNT;
             return (
               <div key={plan.key}
-                className={`relative flex flex-col rounded-2xl border transition-all duration-500 overflow-hidden h-full ${
-                  plan.popular
+                className={`relative flex flex-col rounded-2xl border transition-all duration-500 overflow-hidden h-full ${plan.popular
                     ? "border-blue-500/40 bg-white/5"
                     : "border-white/10 bg-white/5 hover:border-white/20"
-                }`}>
+                  }`}>
 
                 {/* Popular badge */}
                 {plan.popular && (
@@ -166,11 +161,10 @@ export default function PricingCards() {
 
                   {/* CTA */}
                   <Link to={plan.href}
-                    className={`mt-6 flex items-center justify-center gap-2 rounded-xl py-3 text-sm font-semibold transition-all ${
-                      plan.popular
+                    className={`mt-6 flex items-center justify-center gap-2 rounded-xl py-3 text-sm font-semibold transition-all ${plan.popular
                         ? "bg-blue-600 text-white hover:bg-blue-700"
                         : "bg-white/10 text-white hover:bg-blue-600 hover:text-white"
-                    }`}>
+                      }`}>
                     View Details <IconArrowRight />
                   </Link>
 

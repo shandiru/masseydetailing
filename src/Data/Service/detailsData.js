@@ -2,18 +2,18 @@
 
 const LOCATIONS = [
   { label: "Boroughbridge", href: "/locations/boroughbridge" },
-  { label: "Harrogate",     href: "/locations/harrogate" },
-  { label: "Thirsk",        href: "/locations/thirsk" },
-  { label: "Leeds",         href: "/locations/leeds" },
-  { label: "Garforth",      href: "/locations/garforth" },
-  { label: "Wakefield",     href: "/locations/wakefield" },
+  { label: "Harrogate", href: "/locations/harrogate" },
+  { label: "Thirsk", href: "/locations/thirsk" },
+  { label: "Leeds", href: "/locations/leeds" },
+  { label: "Garforth", href: "/locations/garforth" },
+  { label: "Wakefield", href: "/locations/wakefield" },
 ];
 
 export const servicesDetailsData = {
   "maintenance-scheme": {
     title: "About This Service",
     description:
-      "Our Maintenance Scheme is designed for customers who want to keep their vehicle in pristine condition between full details. This service includes a thorough exterior wash, wheel cleaning, tyre dressing, interior vacuum, dashboard wipe, and glass cleaning. Perfect as a regular monthly or bi-monthly treatment.",
+      "Our Maintenance Scheme is designed for customers who want to keep their vehicle in pristine condition between 7 Year Ceramic. This service includes a thorough exterior wash, wheel cleaning, tyre dressing, interior vacuum, dashboard wipe, and glass cleaning. Perfect as a regular monthly or bi-monthly treatment.",
     includedItems: [
       "Full exterior hand wash & dry",
       "Wheel cleaning & tyre dressing",
@@ -68,16 +68,16 @@ export const servicesDetailsData = {
     locations: LOCATIONS,
   },
 
-  "full-detail": {
+  "7 Year Ceramic": {
     title: "About This Service",
     description:
-      "Our flagship Full Detail service combines everything we offer into one premium package. We machine polish your paintwork to remove swirl marks, scratches, and oxidation, then protect it with a professional-grade ceramic coating that lasts up to 2 years. This is the ultimate treatment for those who demand perfection.",
+      "Our 7 Year Ceramic service is the ultimate in long-term paint protection. After a thorough multi-stage machine polish to remove swirl marks, scratches, and oxidation, we apply a professional-grade ceramic coating that bonds to your paintwork and delivers 7 years of durable, hydrophobic protection. The best investment you can make for your vehicle's finish.",
     includedItems: [
       "Everything in Deep Clean",
       "Multi-stage machine polish",
       "Swirl mark & scratch removal",
       "Paint depth gauge readings",
-      "Ceramic coating application (up to 10yr protection)",
+      "Ceramic coating application (7-year protection)",
       "Paint decontamination & clay bar",
       "Glass sealant application",
       "Alloy wheel sealant",

@@ -5,7 +5,7 @@ const COLUMNS = [
   { label: "Maintenance", price: "from £70"  },
   { label: "Full Valet",  price: "from £120" },
   { label: "Deep Clean",  price: "from £175" },
-  { label: "Full Detail", price: "from £400" },
+  { label: "7 Year Ceramic", price: "from £400" },
 ];
 
 // true = check, false = cross
@@ -19,11 +19,11 @@ const ROWS = [
   { feature: "Interior shampoo",          cols: [false, true,  true,  true]  },
   { feature: "Leather conditioning",      cols: [false, true,  true,  true]  },
   { feature: "Exterior hand polish",      cols: [false, true,  true,  true]  },
-  { feature: "Engine bay clean",          cols: [false, true,  true,  true]  },
+  { feature: "Engine bay clean",          cols: [false, false,  true,  true]  },
   { feature: "Hot water extraction",      cols: [false, false, true,  true]  },
   { feature: "Steam cleaning",            cols: [false, false, true,  true]  },
   { feature: "Stain removal",             cols: [false, false, true,  true]  },
-  { feature: "Clay bar treatment",        cols: [false, false, true,  true]  },
+  { feature: "Clay bar treatment",        cols: [false, false, false,  true]  },
   { feature: "Odour elimination",         cols: [false, false, true,  true]  },
   { feature: "Machine polish",            cols: [false, false, false, true]  },
   { feature: "Scratch removal",           cols: [false, false, false, true]  },

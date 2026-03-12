@@ -28,18 +28,18 @@ const services = [
     link: "/services/deep-clean",
   },
   {
-    title: "Full Detail",
+    title: "7 Year Ceramic",
     description:
       "Machine polish & ceramic coating for the ultimate finish.",
     price: "400",
     image: "/m10.jpeg",
-    link: "/services/full-detail",
+    link: "/services/7 Year Ceramic",
   },
 ];
 
 const ServicesSection = () => {
   return (
-    <section className="py-24 bg-black">
+    <section id="services" className="py-24 bg-black">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Heading */}

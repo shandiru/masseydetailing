@@ -49,7 +49,7 @@ const plans = [
     link: "/services/deep-clean",
   },
   {
-    title: "Full Detail",
+    title: "7 Year Ceramic",
     description: "Machine polish & ceramic coating for the ultimate finish.",
     price: 400,
     duration: "1-2 days",
@@ -62,7 +62,7 @@ const plans = [
       "Ceramic coating application (up to 10yr protection)",
     ],
     more: 4,
-    link: "/services/full-detail",
+    link: "/services/7 Year Ceramic",
   },
 ];
 

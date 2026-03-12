@@ -8,7 +8,7 @@ export const servicesData = {
 
     breadcrumb: [
       { label: "Home", link: "/" },
-      { label: "Services", link: "/services" },
+      { label: "Services", link: "/#services" },
       { label: "Maintenance Scheme" }
     ]
   },
@@ -18,11 +18,11 @@ export const servicesData = {
     title: "Full Valet",
     price: "120",
     duration: "3-4 hours",
-    backgroundImage: "/full-valet.jpg",
+    backgroundImage: "/m1.png",
 
     breadcrumb: [
       { label: "Home", link: "/" },
-      { label: "Services", link: "/services" },
+      { label: "Services", link: "/#services" },
       { label: "Full Valet" }
     ]
   },
@@ -32,28 +32,28 @@ export const servicesData = {
     title: "Deep Clean",
     price: "175",
     duration: "5-7 hours",
-    backgroundImage: "/interior-clean.jpg",
+    backgroundImage: "/m12.jpeg",
 
     breadcrumb: [
       { label: "Home", link: "/" },
-      { label: "Services", link: "/services" },
+      { label: "Services", link: "/#services" },
       { label: "Deep Clean" }
     ]
   },
-  "full-detail": {
-  title: "Full Detail",
+  "7 Year Ceramic": {
+    title: "7 Year Ceramic",
 
-  price: "400",
+    price: "400",
 
-  duration: "1-2 days",
+    duration: "1-2 days",
 
-  backgroundImage: "/detail-close.jpg",
+    backgroundImage: "/m10.jpeg",
 
-  breadcrumb: [
-    { label: "Home", link: "/" },
-    { label: "Services", link: "/pricing" },
-    { label: "Full Detail" }
-  ]
-}
+    breadcrumb: [
+      { label: "Home", link: "/" },
+      { label: "Services", link: "/#services" },
+      { label: "7 Year Ceramic" }
+    ]
+  }
 
 };

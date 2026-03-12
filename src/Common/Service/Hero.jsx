@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Hero({
   title,
@@ -28,9 +29,9 @@ export default function Hero({
           {breadcrumb.map((item, index) => (
             <React.Fragment key={index}>
               {item.link ? (
-                <a href={item.link} className="hover:text-white">
+                <Link to={item.link} className="hover:text-white">
                   {item.label}
-                </a>
+                </Link>
               ) : (
                 <span className="text-white">{item.label}</span>
               )}

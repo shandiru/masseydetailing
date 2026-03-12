@@ -22,18 +22,18 @@ export const allServices = [
     href: "/services/deep-clean",
   },
   {
-    key: "full-detail",
-    title: "Full Detail",
+    key: "7 Year Ceramic",
+    title: "7 Year Ceramic",
     price: "from £400",
     image: "/m10.jpeg",
-    href: "/services/full-detail",
+    href: "/services/7 Year Ceramic",
   },
 ];
 
 // Per-page explore data — previous & next
 export const exploreData = {
   "maintenance-scheme": {
-    previous: "full-detail",
+    previous: "7 Year Ceramic",
     next: "full-valet",
   },
   "full-valet": {
@@ -42,9 +42,9 @@ export const exploreData = {
   },
   "deep-clean": {
     previous: "full-valet",
-    next: "full-detail",
+    next: "7 Year Ceramic",
   },
-  "full-detail": {
+  "7 Year Ceramic": {
     previous: "deep-clean",
     next: "maintenance-scheme",
   },

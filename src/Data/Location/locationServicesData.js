@@ -26,12 +26,12 @@ export const allServiceCards = [
     href: "/services/deep-clean",
   },
   {
-    key: "full-detail",
-    title: "Full Detail",
+    key: "7 Year Ceramic",
+    title: "7 Year Ceramic",
     description: "Machine polish & ceramic coating for the ultimate finish.",
     price: "£400",
     image: "/m10.jpeg",
-    href: "/services/full-detail",
+    href: "/services/7 Year Ceramic",
   },
 ];
 

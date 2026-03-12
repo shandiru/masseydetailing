@@ -20,10 +20,12 @@ import Thirsk from "./page/Location/Thirsk";
 import Wakefield from "./page/Location/Wakefield";
 import PricingPage from "./page/PricingPage";
 import BookingTerms from "./page/T&C";
+import ScrollToHash from "./components/Home/ScrollToHash";
 function App() {
   return (
     <Router>
       <ScrollToTop />
+      <ScrollToHash />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -32,7 +34,7 @@ function App() {
         <Route path="/services/maintenance-scheme" element={<MaintenancePage />} />
         <Route path="/services/full-valet" element={<FullValetPage />} />
         <Route path="/services/deep-clean" element={<DeepCleanPage />} />
-        <Route path="/services/full-detail" element={<FullDetailPage />} />
+        <Route path="/services/7 Year Ceramic" element={<FullDetailPage />} />
 
         <Route path="/locations/boroughbridge" element={<Boroughbridge />} />
         <Route path="/locations/garforth" element={<Garforth />} />

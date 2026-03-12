@@ -63,7 +63,7 @@ export default function ExploreOtherServices({ currentService }) {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {cards.map((service) => (
             <Link key={service.key} to={service.href} className="group block">
-              <div className="relative overflow-hidden rounded-2xl border border-white/10 h-48 hover:border-blue-600/40 transition-all duration-500">
+              <div className="relative overflow-hidden rounded-2xl h-100 border border-white/10 hover:border-blue-600/40 transition-all duration-500">
 
                 {/* Image */}
                 <img

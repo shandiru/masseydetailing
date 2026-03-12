@@ -8,7 +8,7 @@ const services = [
     description:
       "Keep your vehicle looking its best with regular upkeep.",
     price: "70",
-    image: "/hero-car.jpg",
+    image: "/m3.jpg",
     link: "/services/maintenance-scheme",
   },
   {
@@ -16,7 +16,7 @@ const services = [
     description:
       "A comprehensive clean inside and out for a showroom finish.",
     price: "120",
-    image: "/full-valet.jpg",
+    image: "/m1.png",
     link: "/services/full-valet",
   },
   {
@@ -24,7 +24,7 @@ const services = [
     description:
       "An intensive restoration for neglected or heavily soiled vehicles.",
     price: "175",
-    image: "/interior-clean.jpg",
+    image: "/m12.jpeg",
     link: "/services/deep-clean",
   },
   {
@@ -32,7 +32,7 @@ const services = [
     description:
       "Machine polish & ceramic coating for the ultimate finish.",
     price: "400",
-    image: "/detail-close.jpg",
+    image: "/m10.jpeg",
     link: "/services/full-detail",
   },
 ];

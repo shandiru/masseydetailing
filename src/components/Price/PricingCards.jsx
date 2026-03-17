@@ -72,7 +72,7 @@ const PLANS = [
       "Paint depth gauge readings",
       "Ceramic coating application (7-year protection)",
     ],
-    href: "/services/7 Year Ceramic",
+    href: "/services/7-Year-Ceramic",
   },
 ];
 

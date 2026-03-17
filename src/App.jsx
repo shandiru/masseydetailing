@@ -34,7 +34,7 @@ function App() {
         <Route path="/services/maintenance-scheme" element={<MaintenancePage />} />
         <Route path="/services/full-valet" element={<FullValetPage />} />
         <Route path="/services/deep-clean" element={<DeepCleanPage />} />
-        <Route path="/services/7 Year Ceramic" element={<FullDetailPage />} />
+        <Route path="/services/7-Year-Ceramic" element={<FullDetailPage />} />
 
         <Route path="/locations/boroughbridge" element={<Boroughbridge />} />
         <Route path="/locations/garforth" element={<Garforth />} />

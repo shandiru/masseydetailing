@@ -6,7 +6,7 @@ const servicesLinks = [
   { label: "Maintenance Scheme", to: "/services/maintenance-scheme", fromPrice: "£70" },
   { label: "Full Valet", to: "/services/full-valet", fromPrice: "£120" },
   { label: "Deep Clean", to: "/services/deep-clean", fromPrice: "£175" },
-  { label: "7 Year Ceramic", to: "/services/7 Year Ceramic", fromPrice: "£400" },
+  { label: "7 Year Ceramic", to: "/services/7-Year-Ceramic", fromPrice: "£400" },
 ];
 
 // Separated label into city and county for better styling control
@@ -89,7 +89,7 @@ export default function Header() {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 group">
           <img
-            src="/logo.webp"
+            src="/logo.png"
             alt="Massey Detailing"
             className="h-10 w-auto"
           />
@@ -159,6 +159,7 @@ export default function Header() {
           </div>
 
           <NavLink to="/pricing" className={navLinkClass}>Pricing</NavLink>
+          <NavLink to="/#gallery" className={navLinkClass}>Portfolio</NavLink>
           <NavLink to="/tcs" className={navLinkClass}>T&C's</NavLink>
         </nav>
 
@@ -233,6 +234,7 @@ export default function Header() {
             </div>
 
             <NavLink to="/pricing" className="px-3 py-3 rounded-lg text-white hover:bg-white/10">Pricing</NavLink>
+            <NavLink to="/#gallery" className="px-3 py-3 rounded-lg text-white hover:bg-white/10">Portfolio</NavLink>
             <NavLink to="/tcs" className="px-3 py-3 rounded-lg text-white hover:bg-white/10">T&C's</NavLink>
 
             <a

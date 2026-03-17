@@ -163,7 +163,7 @@ export default function GallerySection() {
   };
 
   return (
-    <section className="bg-black py-24">
+    <section id="gallery" className="bg-black py-24">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* HEADER */}

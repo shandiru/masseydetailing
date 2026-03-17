@@ -13,7 +13,7 @@ const Footer = () => {
           <div>
             <div className="mb-6">
               <img
-                src="/logo.webp"
+                src="/logo.png"
                 alt="Massey Detailing"
                 className="h-10 w-auto"
               />
@@ -59,7 +59,7 @@ const Footer = () => {
             <ul className="space-y-3">
               {['Maintenance Scheme', 'Full Valet', 'Deep Clean', '7 Year Ceramic'].map((item) => {
                 // If it's the ceramic service, keep spaces (will encode to %20); otherwise, use hyphens
-                const urlPath = item === '7 Year Ceramic'
+                const urlPath = item === '7-Year-Ceramic'
                   ? encodeURIComponent(item)
                   : item.toLowerCase().replace(/\s+/g, '-');
 

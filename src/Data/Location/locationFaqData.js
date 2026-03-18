@@ -43,7 +43,7 @@ export const locationFaqData = {
       {
         question: "What's the most popular service in Harrogate?",
         answer:
-          "The Full Valet and 7 Year Ceramic are very popular with Harrogate customers who take pride in maintaining their vehicles to a high standard.",
+          "The Full Valet and Full Detail are very popular with Harrogate customers who take pride in maintaining their vehicles to a high standard.",
       },
       {
         question: "Do you need a water supply at my property?",
@@ -58,7 +58,7 @@ export const locationFaqData = {
       {
         question: "Do you work on luxury or prestige vehicles?",
         answer:
-          "Yes, we regularly detail prestige and luxury vehicles across the Harrogate area. Our 7 Year Ceramic with ceramic coating is particularly popular for high-end cars.",
+          "Yes, we regularly detail prestige and luxury vehicles across the Harrogate area. Our Full Detail with ceramic coating is particularly popular for high-end cars.",
       },
     ],
   },
@@ -136,7 +136,7 @@ export const locationFaqData = {
       {
         question: "What services are available in Garforth?",
         answer:
-          "All four of our packages — Maintenance Scheme, Full Valet, Deep Clean, and 7 Year Ceramic — are available in the Garforth area.",
+          "All four of our packages — Maintenance Scheme, Full Valet, Deep Clean, and Full Detail are available in the Garforth area.",
       },
       {
         question: "Do you need a water supply?",

@@ -16,7 +16,7 @@ export const servicesData = {
 
   "full-valet": {
     title: "Full Valet",
-    price: "120",
+    price: "100",
     duration: "3-4 hours",
     backgroundImage: "/m1.png",
 
@@ -40,8 +40,8 @@ export const servicesData = {
       { label: "Deep Clean" }
     ]
   },
-  "7 Year Ceramic": {
-    title: "7 Year Ceramic",
+  "Full Detail": {
+    title: "Full Detail",
 
     price: "400",
 
@@ -52,7 +52,7 @@ export const servicesData = {
     breadcrumb: [
       { label: "Home", link: "/" },
       { label: "Services", link: "/#services" },
-      { label: "7 Year Ceramic" }
+      { label: "Full Detail" }
     ]
   }
 

@@ -57,9 +57,9 @@ const Footer = () => {
           <div>
             <h3 className="text-sm font-bold uppercase tracking-widest mb-6">Services</h3>
             <ul className="space-y-3">
-              {['Maintenance Scheme', 'Full Valet', 'Deep Clean', '7 Year Ceramic'].map((item) => {
+              {['Maintenance Scheme', 'Full Valet', 'Deep Clean', 'Full Detail'].map((item) => {
                 // If it's the ceramic service, keep spaces (will encode to %20); otherwise, use hyphens
-                const urlPath = item === '7-Year-Ceramic'
+                const urlPath = item === 'full-detail'
                   ? encodeURIComponent(item)
                   : item.toLowerCase().replace(/\s+/g, '-');
 

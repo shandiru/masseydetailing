@@ -21,7 +21,7 @@ const plans = [
   {
     title: "Full Valet",
     description: "A comprehensive clean inside and out for a showroom finish.",
-    price: 120,
+    price: 100,
     duration: "3-4 hours",
     features: [
       "Everything in Maintenance Scheme",
@@ -49,7 +49,7 @@ const plans = [
     link: "/services/deep-clean",
   },
   {
-    title: "7 Year Ceramic",
+    title: "Full Detail",
     description: "Machine polish & ceramic coating for the ultimate finish.",
     price: 400,
     duration: "1-2 days",
@@ -62,7 +62,7 @@ const plans = [
       "Ceramic coating application (up to 10yr protection)",
     ],
     more: 4,
-    link: "/services/7 Year Ceramic",
+    link: "/services/full-detail",
   },
 ];
 

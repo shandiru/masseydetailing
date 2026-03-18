@@ -13,7 +13,7 @@ export const allServiceCards = [
     key: "full-valet",
     title: "Full Valet",
     description: "A comprehensive clean inside and out for a showroom finish.",
-    price: "£120",
+    price: "£100",
     image: "/m1.png",
     href: "/services/full-valet",
   },
@@ -26,12 +26,12 @@ export const allServiceCards = [
     href: "/services/deep-clean",
   },
   {
-    key: "7 Year Ceramic",
-    title: "7 Year Ceramic",
+    key: "Full Detail",
+    title: "Full Detail",
     description: "Machine polish & ceramic coating for the ultimate finish.",
     price: "£400",
     image: "/m10.jpeg",
-    href: "/services/7 Year Ceramic",
+    href: "/services/full-detail",
   },
 ];
 

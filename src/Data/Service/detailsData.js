@@ -13,7 +13,7 @@ export const servicesDetailsData = {
   "maintenance-scheme": {
     title: "About This Service",
     description:
-      "Our Maintenance Scheme is designed for customers who want to keep their vehicle in pristine condition between 7 Year Ceramic. This service includes a thorough exterior wash, wheel cleaning, tyre dressing, interior vacuum, dashboard wipe, and glass cleaning. Perfect as a regular monthly or bi-monthly treatment.",
+      "Our Maintenance Scheme is designed for customers who want to keep their vehicle in pristine condition. This service includes a thorough exterior wash, wheel cleaning, tyre dressing, interior vacuum, dashboard wipe, and glass cleaning. Perfect as a regular monthly or bi-monthly treatment.",
     includedItems: [
       "Full exterior hand wash & dry",
       "Wheel cleaning & tyre dressing",
@@ -42,7 +42,7 @@ export const servicesDetailsData = {
       "Engine bay clean",
       "Full interior sanitisation",
     ],
-    price: "£120",
+    price: "£100",
     duration: "3-4 hours",
     quoteLink: "/pricing",
     locations: LOCATIONS,
@@ -68,10 +68,10 @@ export const servicesDetailsData = {
     locations: LOCATIONS,
   },
 
-  "7 Year Ceramic": {
+  "Full Detail": {
     title: "About This Service",
     description:
-      "Our 7 Year Ceramic service is the ultimate in long-term paint protection. After a thorough multi-stage machine polish to remove swirl marks, scratches, and oxidation, we apply a professional-grade ceramic coating that bonds to your paintwork and delivers 7 years of durable, hydrophobic protection. The best investment you can make for your vehicle's finish.",
+      "Our Full Detail is the ultimate in long-term paint protection. After a thorough multi-stage machine polish to remove swirl marks, scratches, and oxidation, we apply a professional-grade ceramic coating that bonds to your paintwork and delivers 7 years of durable, hydrophobic protection. The best investment you can make for your vehicle's finish.",
     includedItems: [
       "Everything in Deep Clean",
       "Multi-stage machine polish",

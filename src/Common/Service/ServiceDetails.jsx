@@ -15,9 +15,9 @@ function IconWhatsApp(props) {
 const SERVICE_OPTIONS = [
   "Select Your Service",
   "Maintenance Scheme from £70",
-  "Full Valet from £120",
+  "Full Valet from £100",
   "Deep Clean from £175",
-  "7 Year Ceramic from £400"
+  "Full Detail from £400"
 ];
 
 // --- MODAL COMPONENT ---

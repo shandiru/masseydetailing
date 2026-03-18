@@ -3,9 +3,9 @@ import React from "react";
 
 const COLUMNS = [
   { label: "Maintenance", price: "from £70"  },
-  { label: "Full Valet",  price: "from £120" },
+  { label: "Full Valet",  price: "from £100" },
   { label: "Deep Clean",  price: "from £175" },
-  { label: "7 Year Ceramic", price: "from £400" },
+  { label: "Full Detail", price: "from £400" },
 ];
 
 // true = check, false = cross

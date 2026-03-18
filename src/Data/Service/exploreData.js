@@ -10,7 +10,7 @@ export const allServices = [
   {
     key: "full-valet",
     title: "Full Valet",
-    price: "from £120",
+    price: "from £100",
     image: " /m1.png",
     href: "/services/full-valet",
   },
@@ -22,18 +22,18 @@ export const allServices = [
     href: "/services/deep-clean",
   },
   {
-    key: "7 Year Ceramic",
-    title: "7 Year Ceramic",
+    key: "Full Detail",
+    title: "Full Detail",
     price: "from £400",
     image: "/m10.jpeg",
-    href: "/services/7 Year Ceramic",
+    href: "/services/full-detail",
   },
 ];
 
 // Per-page explore data — previous & next
 export const exploreData = {
   "maintenance-scheme": {
-    previous: "7 Year Ceramic",
+    previous: "Full Detail",
     next: "full-valet",
   },
   "full-valet": {
@@ -42,9 +42,9 @@ export const exploreData = {
   },
   "deep-clean": {
     previous: "full-valet",
-    next: "7 Year Ceramic",
+    next: "Full Detail",
   },
-  "7 Year Ceramic": {
+  "Full Detail": {
     previous: "deep-clean",
     next: "maintenance-scheme",
   },

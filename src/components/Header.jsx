@@ -4,9 +4,9 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 
 const servicesLinks = [
   { label: "Maintenance Scheme", to: "/services/maintenance-scheme", fromPrice: "£70" },
-  { label: "Full Valet", to: "/services/full-valet", fromPrice: "£120" },
+  { label: "Full Valet", to: "/services/full-valet", fromPrice: "£100" },
   { label: "Deep Clean", to: "/services/deep-clean", fromPrice: "£175" },
-  { label: "7 Year Ceramic", to: "/services/7-Year-Ceramic", fromPrice: "£400" },
+  { label: "Full Detail", to: "/services/full-detail", fromPrice: "£400" },
 ];
 
 // Separated label into city and county for better styling control

@@ -6,14 +6,14 @@ import ServiceDetailsSection from "../../Common/Service/ServiceDetails";
 import ExploreOtherServices from "../../Common/Service/ExploreOtherServices";
 const FullDetailPage = () => {
   
-const pageData = servicesData["7 Year Ceramic"];
- const details = servicesDetailsData["7 Year Ceramic"];
+const pageData = servicesData["Full Detail"];
+ const details = servicesDetailsData["Full Detail"];
   return (
     <main className="bg-black min-h-screen">
      
     <Hero {...pageData} />
      <ServiceDetailsSection data={details} />
-     <ExploreOtherServices currentService="7 Year Ceramic" />
+     <ExploreOtherServices currentService="Full Detail" />
       
      
     </main>

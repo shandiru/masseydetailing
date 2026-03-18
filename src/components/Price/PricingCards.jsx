@@ -25,7 +25,7 @@ const PLANS = [
     key: "full-valet",
     title: "Full Valet",
     description: "A comprehensive clean inside and out for a showroom finish.",
-    price: "£120",
+    price: "£100",
     duration: "3-4 hours",
     popular: false,
     features: [
@@ -59,8 +59,8 @@ const PLANS = [
     href: "/services/deep-clean",
   },
   {
-    key: "7 Year Ceramic",
-    title: "7 Year Ceramic",
+    key: "Full Detail",
+    title: "Full Detail",
     description: "Machine polish & 7-year ceramic coating for the ultimate, lasting finish.",
     price: "£400",
     duration: "1-2 days",
@@ -72,7 +72,7 @@ const PLANS = [
       "Paint depth gauge readings",
       "Ceramic coating application (7-year protection)",
     ],
-    href: "/services/7-Year-Ceramic",
+    href: "/services/full-detail",
   },
 ];
 

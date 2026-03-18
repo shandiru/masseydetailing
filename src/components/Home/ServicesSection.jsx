@@ -15,7 +15,7 @@ const services = [
     title: "Full Valet",
     description:
       "A comprehensive clean inside and out for a showroom finish.",
-    price: "120",
+    price: "100",
     image: "/m1.png",
     link: "/services/full-valet",
   },
@@ -28,12 +28,12 @@ const services = [
     link: "/services/deep-clean",
   },
   {
-    title: "7 Year Ceramic",
+    title: "Full Detail",
     description:
       "Machine polish & ceramic coating for the ultimate finish.",
     price: "400",
     image: "/m10.jpeg",
-    link: "/services/7 Year Ceramic",
+    link: "/services/full-detail",
   },
 ];
 

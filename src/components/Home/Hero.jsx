@@ -1,5 +1,6 @@
 import React from "react";
 import { Phone, ArrowRight, Shield, Star } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -53,13 +54,13 @@ const HeroSection = () => {
               07399 539744
             </a>
 
-            <a
-              href="/pricing"
+            <Link
+              to="/pricing"
               className="inline-flex items-center gap-2 bg-gray-800 text-white px-7 py-3.5 rounded-xl text-sm font-semibold hover:bg-gray-700 transition"
             >
               View Pricing
               <ArrowRight size={16} />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

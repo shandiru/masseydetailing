@@ -161,6 +161,7 @@ export default function Header() {
           <NavLink to="/pricing" className={navLinkClass}>Pricing</NavLink>
           <NavLink to="/#gallery" className={navLinkClass}>Portfolio</NavLink>
           <NavLink to="/tcs" className={navLinkClass}>T&C's</NavLink>
+          <NavLink to="/review" className={navLinkClass}>Review</NavLink>
         </nav>
 
         {/* Call button */}
@@ -235,6 +236,7 @@ export default function Header() {
 
             <NavLink to="/pricing" className="px-3 py-3 rounded-lg text-white hover:bg-white/10">Pricing</NavLink>
             <NavLink to="/#gallery" className="px-3 py-3 rounded-lg text-white hover:bg-white/10">Portfolio</NavLink>
+            <NavLink to="/review" className="px-3 py-3 rounded-lg text-white hover:bg-white/10">Review</NavLink>
             <NavLink to="/tcs" className="px-3 py-3 rounded-lg text-white hover:bg-white/10">T&C's</NavLink>
 
             <a

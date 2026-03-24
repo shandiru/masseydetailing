@@ -21,6 +21,7 @@ import Wakefield from "./page/Location/Wakefield";
 import PricingPage from "./page/PricingPage";
 import BookingTerms from "./page/T&C";
 import ScrollToHash from "./components/Home/ScrollToHash";
+import ReviewPage from "./page/Review";
 function App() {
   return (
     <Router>
@@ -29,7 +30,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-
+        <Route path="/review" element={<ReviewPage /> } />
 
         <Route path="/services/maintenance-scheme" element={<MaintenancePage />} />
         <Route path="/services/full-valet" element={<FullValetPage />} />

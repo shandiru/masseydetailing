@@ -37,7 +37,6 @@ export default function ReviewPage() {
         setLoading(true);
         setError('');
 
-        // Generates string like "★★★★☆" for the email template
         const visualStars = "★".repeat(rating) + "☆".repeat(5 - rating);
 
         const templateParams = {

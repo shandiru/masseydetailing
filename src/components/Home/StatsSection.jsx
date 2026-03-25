@@ -56,7 +56,7 @@ const StatsSection = () => {
               {/* Stat Item Container */}
               <div className="relative flex-1 w-full flex items-center justify-center py-12 px-5 md:py-0">
                 
-                {/* Background Large Number - Darker and Bolder */}
+                {/* Background Large Number - and Bolder */}
                 <div className="text-[140px] font-black leading-none select-none text-[#1A1A1A] transition-all duration-700">
                   {counts[index]}
                 </div>

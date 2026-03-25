@@ -27,7 +27,7 @@ const ShowroomCTA = () => {
               <Phone size={18} />
               Call 07399 539744
             </a>
-            {/* Dark Grey Pricing Button (Secondary) */}
+            {/*  Grey Pricing Button (Secondary) */}
             <Link
               to="/pricing"
               className="inline-flex items-center gap-2 bg-[#121212] text-gray-300 border border-gray-800 px-8 py-4 rounded-xl text-sm font-semibold hover:bg-[#1a1a1a] transition-colors"

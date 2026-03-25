@@ -14,10 +14,10 @@ const HeroSection = () => {
           loop
           playsInline
           className="w-full h-full object-cover"
+          poster="/fall.png"
+          onError={(e) => (e.currentTarget.style.display = "none")}
         >
-          <source src="/hero-car-video.mp4" type="video/mp4" />
-          {/* Fallback image if video fails to load */}
-          <img src="/hero-car.jpg" alt="Premium car detailing" className="w-full h-full object-cover" />
+          <source src="/video.mp4" type="video/mp4" />
         </video>
 
         {/* Gradient Overlay */}

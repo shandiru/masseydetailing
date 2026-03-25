@@ -1,21 +1,24 @@
 import React from "react";
-import { Phone, ArrowRight, Shield, Star } from "lucide-react";
+import { Phone, ArrowRight, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
 
-      {/* Background Image */}
+      {/* Background Video */}
       <div className="absolute inset-0">
-        <img
-          src="/hero-car.jpg"
-          alt="Premium car detailing"
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
           className="w-full h-full object-cover"
-        />
-
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/70"></div>
+        >
+          <source src="/hero-car-video.mp4" type="video/mp4" />
+          {/* Fallback image if video fails to load */}
+          <img src="/hero-car.jpg" alt="Premium car detailing" className="w-full h-full object-cover" />
+        </video>
 
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-transparent"></div>

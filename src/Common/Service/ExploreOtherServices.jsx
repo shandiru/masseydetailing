@@ -4,38 +4,16 @@ import { Link } from "react-router-dom";
 
 function ArrowLeft() {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="h-3 w-3"
-      aria-hidden="true"
-    >
-      <path d="m12 19-7-7 7-7" />
-      <path d="M19 12H5" />
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-3 w-3" aria-hidden="true">
+      <path d="m12 19-7-7 7-7" /><path d="M19 12H5" />
     </svg>
   );
 }
 
 function ArrowRight() {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="h-3 w-3"
-      aria-hidden="true"
-    >
-      <path d="M5 12h14" />
-      <path d="m12 5 7 7-7 7" />
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-3 w-3" aria-hidden="true">
+      <path d="M5 12h14" /><path d="m12 5 7 7-7 7" />
     </svg>
   );
 }
@@ -47,28 +25,29 @@ export default function ExploreOtherServices({ currentService }) {
   const previousService = allServices.find((s) => s.key === explore.previous);
   const nextService = allServices.find((s) => s.key === explore.next);
 
+  // 1. Create the objects and filter out any that are undefined/null
   const cards = [
-    { ...previousService, label: "Previous", align: "left" },
-    { ...nextService,     label: "Next",     align: "right" },
-  ];
+    previousService ? { ...previousService, label: "Previous", align: "left" } : null,
+    nextService ? { ...nextService, label: "Next", align: "right" } : null,
+  ].filter(Boolean); // This removes the null entries
 
   return (
     <section className="py-16 bg-black border-t border-white/10">
       <div className="mx-auto max-w-7xl px-6">
-
         <h2 className="text-2xl font-bold text-white mb-8">
           Explore Other Services
         </h2>
 
+        {/* 2. Grid adjusts automatically if there is only 1 card */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {cards.map((service) => (
             <Link key={service.key} to={service.href} className="group block">
               <div className="relative overflow-hidden rounded-2xl h-100 border border-white/10 hover:border-blue-600/40 transition-all duration-500">
-
-                {/* Image */}
+                
+                {/* Image - Added optional chaining for absolute safety */}
                 <img
-                  src={service.image}
-                  alt={service.title}
+                  src={service?.image}
+                  alt={service?.title}
                   className="absolute inset-0 h-full w-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
 
@@ -82,7 +61,7 @@ export default function ExploreOtherServices({ currentService }) {
                   }`}
                 >
                   <div className={service.align === "right" ? "ml-auto text-right" : ""}>
-
+                    
                     {/* Label */}
                     <div
                       className={`flex items-center gap-2 text-xs text-white/60 mb-1 ${
@@ -96,22 +75,19 @@ export default function ExploreOtherServices({ currentService }) {
 
                     {/* Title */}
                     <h3 className="text-lg font-bold text-white">
-                      {service.title}
+                      {service?.title}
                     </h3>
 
                     {/* Price */}
                     <span className="text-sm text-blue-500 font-medium">
-                      {service.price}
+                      {service?.price}
                     </span>
-
                   </div>
                 </div>
-
               </div>
             </Link>
           ))}
         </div>
-
       </div>
     </section>
   );

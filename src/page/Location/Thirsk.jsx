@@ -19,8 +19,8 @@ const Thirsk = () => {
             <LocationServices data={locationServicesData["thirsk"]} />
             <ThirskMapSection />
             <LocationFaq data={locationFaqData["thirsk"]} />
-            <LocationOtherAreas data={locationOtherAreasData["thirsk"]} />
-            <LocationCta data={locationCtaData["thirsk"]} />
+            <LocationOtherAreas data={locationOtherAreasData["location"]} />
+            <LocationCta data={locationCtaData["button"]} />
         </main>
     );
 };

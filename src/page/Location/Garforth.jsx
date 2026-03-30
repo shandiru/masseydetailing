@@ -18,8 +18,8 @@ const Garforth = () => {
             <LocationServices data={locationServicesData["garforth"]} />
             <GarforthMapSection />
             <LocationFaq data={locationFaqData["garforth"]} />
-            <LocationOtherAreas data={locationOtherAreasData["garforth"]} />
-            <LocationCta data={locationCtaData["garforth"]} />
+            <LocationOtherAreas data={locationOtherAreasData["location"]} />
+            <LocationCta data={locationCtaData["button"]} />
         </main>
     );
 };

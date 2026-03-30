@@ -18,8 +18,8 @@ const Boroughbridge = () => {
       <LocationServices data={locationServicesData["boroughbridge"]} />
       <BoroughbridgeMapSection />
       <LocationFaq data={locationFaqData["boroughbridge"]} />
-      <LocationOtherAreas data={locationOtherAreasData["boroughbridge"]} />
-      <LocationCta data={locationCtaData["boroughbridge"]} />
+      <LocationOtherAreas data={locationOtherAreasData["location"]} />
+      <LocationCta data={locationCtaData["button"]} />
     </main>
   );
 };

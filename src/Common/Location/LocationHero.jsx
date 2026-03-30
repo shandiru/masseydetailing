@@ -1,17 +1,17 @@
-// Common/Location/LocationHero.jsx
 import React from "react";
 import { Link } from "react-router-dom";
 
-const MAPS_API_KEY = "AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8";
+// Access the API key from Vite's environment variables
+const MAPS_API_KEY = import.meta.env.VITE_MAPS_API_KEY;
 
 export default function LocationHero({ data }) {
   const { breadcrumb, region, city, description, phone, quoteLink, mapQuery, mapZoom } = data;
 
-  const mapSrc = `https://www.google.com/maps/embed/v1/place?key=${MAPS_API_KEY}&q=${mapQuery}&zoom=${mapZoom}&maptype=roadmap`;
+  const mapSrc = `https://www.google.com/maps/embed/v1/place?key=${MAPS_API_KEY}&q=${encodeURIComponent(mapQuery)}&zoom=${mapZoom}`;
 
   return (
     <section className="relative bg-black border-b border-white/10 py-16 sm:py-24 overflow-hidden">
-
+      
       {/* Dot grid background */}
       <div className="absolute inset-0 opacity-5">
         <div
@@ -103,15 +103,22 @@ export default function LocationHero({ data }) {
           </div>
 
           {/* Right — Map */}
-          <div className="rounded-2xl overflow-hidden border border-white/10 h-[300px] sm:h-[350px]">
-            <iframe
-              title={`Map of ${city}`}
-              width="100%"
-              height="100%"
-              loading="lazy"
-              src={mapSrc}
-              style={{ border: 0 }}
-            />
+          <div className="rounded-2xl overflow-hidden border border-white/10 h-[300px] sm:h-[350px] bg-white/5">
+            {MAPS_API_KEY ? (
+              <iframe
+                title={`Map of ${city}`}
+                width="100%"
+                height="100%"
+                loading="lazy"
+                src={mapSrc}
+                style={{ border: 0 }}
+                allowFullScreen
+              />
+            ) : (
+              <div className="h-full flex items-center justify-center text-white/30 text-sm">
+                Map Unavailable (Missing API Key)
+              </div>
+            )}
           </div>
 
         </div>

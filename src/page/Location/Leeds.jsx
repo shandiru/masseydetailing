@@ -18,8 +18,8 @@ const Leeds = () => {
             <LocationServices data={locationServicesData["leeds"]} />
             <LeedsMapSection />
             <LocationFaq data={locationFaqData["leeds"]} />
-            <LocationOtherAreas data={locationOtherAreasData["leeds"]} />
-            <LocationCta data={locationCtaData["leeds"]} />
+            <LocationOtherAreas data={locationOtherAreasData["location"]} />
+            <LocationCta data={locationCtaData["button"]} />
         </main>
     );
 };

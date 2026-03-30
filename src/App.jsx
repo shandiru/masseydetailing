@@ -7,9 +7,9 @@ import Home from "./page/Home";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import ScrollToTop from "./components/ScrollToTop";
 import Header from "./components/Header";
-import GDPRBanner from "../src/components/GDPRBanner"
+import GDPRBanner from "./components/GDPRBanner"
 import MaintenancePage from "./page/Service/MaintenancePage";
-import FullValetPage from "../src/page/Service/FullValet"
+import FullValetPage from "./page/Service/FullValet"
 import DeepCleanPage from "./page/Service/DeepClean";
 import FullDetailPage from './page/Service/FullDetailPage'
 import Boroughbridge from './page/Location/Boroughbridge'
@@ -22,6 +22,7 @@ import PricingPage from "./page/PricingPage";
 import BookingTerms from "./page/T&C";
 import ScrollToHash from "./components/Home/ScrollToHash";
 import ReviewPage from "./page/Review";
+import NotFound from "./components/NotFound";
 function App() {
   return (
     <Router>
@@ -50,6 +51,7 @@ function App() {
 
         <Route path="/terms-conditions" element={<TermsConditions />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
       <GDPRBanner />

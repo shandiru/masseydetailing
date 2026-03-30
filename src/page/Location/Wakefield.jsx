@@ -18,8 +18,8 @@ const Wakefield = () => {
             <LocationServices data={locationServicesData["wakefield"]} />
             <WakefieldMapSection />
             <LocationFaq data={locationFaqData["wakefield"]} />
-            <LocationOtherAreas data={locationOtherAreasData["wakefield"]} />
-            <LocationCta data={locationCtaData["wakefield"]} />
+            <LocationOtherAreas data={locationOtherAreasData["location"]} />
+            <LocationCta data={locationCtaData["button"]} />
         </main>
     );
 };

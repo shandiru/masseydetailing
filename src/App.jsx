@@ -1,6 +1,6 @@
 
 import React from "react";
-import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import TermsConditions from "./components/Term";
 import Home from "./page/Home";
@@ -8,10 +8,7 @@ import PrivacyPolicy from "./components/PrivacyPolicy";
 import ScrollToTop from "./components/ScrollToTop";
 import Header from "./components/Header";
 import GDPRBanner from "./components/GDPRBanner"
-import MaintenancePage from "./page/Service/MaintenancePage";
-import FullValetPage from "./page/Service/FullValet"
-import DeepCleanPage from "./page/Service/DeepClean";
-import FullDetailPage from './page/Service/FullDetailPage'
+
 import Boroughbridge from './page/Location/Boroughbridge'
 import Garforth from "./page/Location/Garforth";
 import Harrogate from "./page/Location/Harrogate";
@@ -23,6 +20,7 @@ import BookingTerms from "./page/T&C";
 import ScrollToHash from "./components/Home/ScrollToHash";
 import ReviewPage from "./page/Review";
 import NotFound from "./components/NotFound";
+import ServicePage from "./page/ServicePage";
 function App() {
   return (
     <Router>
@@ -31,12 +29,24 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/review" element={<ReviewPage /> } />
+        <Route path="/review" element={<ReviewPage />} />
 
-        <Route path="/services/maintenance-scheme" element={<MaintenancePage />} />
-        <Route path="/services/full-valet" element={<FullValetPage />} />
-        <Route path="/services/deep-clean" element={<DeepCleanPage />} />
-        <Route path="/services/full-detail" element={<FullDetailPage />} />
+        <Route
+          path="/services/maintenance-scheme"
+          element={<ServicePage serviceKey="maintenance-scheme" />}
+        />
+        <Route
+          path="/services/full-valet"
+          element={<ServicePage serviceKey="full-valet" />}
+        />
+        <Route
+          path="/services/deep-clean"
+          element={<ServicePage serviceKey="deep-clean" />}
+        />
+        <Route
+          path="/services/full-detail"
+          element={<ServicePage serviceKey="full-detail" />}
+        />
 
         <Route path="/locations/boroughbridge" element={<Boroughbridge />} />
         <Route path="/locations/garforth" element={<Garforth />} />
@@ -47,7 +57,7 @@ function App() {
         <Route path="/locations/wakefield" element={<Wakefield />} />
 
         <Route path="/pricing" element={<PricingPage />} />
-        <Route path="/tcs" element={<BookingTerms /> } />
+        <Route path="/tcs" element={<BookingTerms />} />
 
         <Route path="/terms-conditions" element={<TermsConditions />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />

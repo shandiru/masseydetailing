@@ -40,7 +40,7 @@ export const servicesData = {
       { label: "Deep Clean" }
     ]
   },
-  "Full Detail": {
+  "full-detail": {
     title: "Full Detail",
 
     price: "400",

@@ -44,7 +44,7 @@ export const exploreData = {
     previous: "full-valet",
     next: "Full Detail",
   },
-  "Full Detail": {
+  "full-detail": {
     previous: "deep-clean",
     next: "maintenance-scheme",
   },

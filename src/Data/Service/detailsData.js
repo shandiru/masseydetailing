@@ -68,7 +68,7 @@ export const servicesDetailsData = {
     locations: LOCATIONS,
   },
 
-  "Full Detail": {
+  "full-detail": {
     title: "About This Service",
     description:
       "Our Full Detail is the ultimate in long-term paint protection. After a thorough multi-stage machine polish to remove swirl marks, scratches, and oxidation, we apply a professional-grade ceramic coating that bonds to your paintwork and delivers 7 years of durable, hydrophobic protection. The best investment you can make for your vehicle's finish.",

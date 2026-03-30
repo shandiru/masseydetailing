@@ -2,6 +2,7 @@ import React from 'react';
 import { Phone, Mail, MapPin, Facebook, Instagram } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { servicesLinks, locationLinks, contactInfo } from '../config/navigation';
+import { HashLink } from 'react-router-hash-link';
 
 const Footer = () => {
   return (
@@ -94,7 +95,7 @@ const Footer = () => {
           <div>
             <h3 className="text-sm font-bold uppercase tracking-widest mb-6">Quick Links</h3>
             <ul className="space-y-3">
-              <li><Link to="/" className="text-sm text-gray-400 hover:text-[#0052cc] transition-colors">Home</Link></li>
+              <li><HashLink to="/#" className="text-sm text-gray-400 hover:text-[#0052cc] transition-colors">Home</HashLink></li>
               <li><Link to="/pricing" className="text-sm text-gray-400 hover:text-[#0052cc] transition-colors">Pricing</Link></li>
               <li><Link to="/review" className="text-sm text-gray-400 hover:text-[#0052cc] transition-colors">Reviews</Link></li>
               <li><Link to="/tcs" className="text-sm text-gray-400 hover:text-[#0052cc] transition-colors">Booking T&C's</Link></li>

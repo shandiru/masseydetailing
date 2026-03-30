@@ -12,7 +12,7 @@ import ShowroomCTA from "../components/Home/ShowroomCTA"
 import GallerySection from "../components/Home/GallerySection";
 const Home = () => {
     return (
-        <div>
+        <main>
             <Hero />
             <ServicesSection />
             <StatsSection />
@@ -22,7 +22,7 @@ const Home = () => {
             <TestimonialsSection />
             <ServiceAreasSection />
             <ShowroomCTA />
-        </div>
+        </main>
     )
 }
 

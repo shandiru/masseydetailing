@@ -6,6 +6,23 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 // Import the shared navigation configuration
 import { servicesLinks, locationLinks, contactInfo } from "../config/navigation";
 
+// Helper functions moved outside component to prevent recreation on every render
+const navLinkClass = ({ isActive }) =>
+  [
+    "px-4 py-2 rounded-lg text-sm font-medium transition-colors",
+    isActive
+      ? "text-white bg-white/10"
+      : "text-white/70 hover:text-white hover:bg-white/10",
+  ].join(" ");
+
+const dropdownBtnClass = (active) =>
+  [
+    "px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-1",
+    active
+      ? "text-blue-400 bg-blue-500/10"
+      : "text-white/70 hover:text-white hover:bg-white/10",
+  ].join(" ");
+
 const ChevronDown = ({ className = "" }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
     fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
@@ -49,22 +66,6 @@ export default function Header() {
     document.addEventListener("mousedown", onClick);
     return () => document.removeEventListener("mousedown", onClick);
   }, []);
-
-  const navLinkClass = ({ isActive }) =>
-    [
-      "px-4 py-2 rounded-lg text-sm font-medium transition-colors",
-      isActive
-        ? "text-white bg-white/10"
-        : "text-white/70 hover:text-white hover:bg-white/10",
-    ].join(" ");
-
-  const dropdownBtnClass = (active) =>
-    [
-      "px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-1",
-      active
-        ? "text-blue-400 bg-blue-500/10"
-        : "text-white/70 hover:text-white hover:bg-white/10",
-    ].join(" ");
 
   const isServicesRoute = pathname.startsWith("/services");
   const isLocationsRoute = pathname.startsWith("/locations");

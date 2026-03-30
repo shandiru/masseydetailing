@@ -27,7 +27,7 @@ export default function LocationHero({ data }) {
       <div className="relative mx-auto max-w-7xl px-6">
 
         {/* Breadcrumb */}
-        <div className="flex items-center gap-2 text-sm text-white/50 mb-6 pt-15">
+        <div className="flex items-center gap-2 text-sm text-white/50 mb-6 pt-16">
           {breadcrumb.map((crumb, i) => (
             <React.Fragment key={crumb}>
               {i < breadcrumb.length - 1 ? (

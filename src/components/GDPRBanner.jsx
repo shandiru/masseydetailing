@@ -2,43 +2,59 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function GDPRConsent() {
-  const [visible, setVisible] = useState(false);
-  const [accepted, setAccepted] = useState(null);
-  const [showIcon, setShowIcon] = useState(false);
+  // Batched state to prevent multiple re-renders
+  const [consentState, setConsentState] = useState({
+    visible: false,
+    accepted: null,
+    showIcon: false,
+  });
 
   useEffect(() => {
     const consent = localStorage.getItem("gdprConsent");
     if (consent === "true" || consent === "false") {
-      setAccepted(consent === "true");
-      setShowIcon(true);
+      setConsentState({
+        accepted: consent === "true",
+        showIcon: true,
+        visible: false,
+      });
     } else {
-      setVisible(true);
+      setConsentState((prev) => ({
+        ...prev,
+        visible: true,
+      }));
     }
   }, []);
 
   const handleAccept = () => {
     localStorage.setItem("gdprConsent", "true");
-    setAccepted(true);
-    setVisible(false);
-    setShowIcon(true);
+    setConsentState({
+      accepted: true,
+      visible: false,
+      showIcon: true,
+    });
   };
 
   const handleReject = () => {
     localStorage.setItem("gdprConsent", "false");
-    setAccepted(false);
-    setVisible(false);
-    setShowIcon(true);
+    setConsentState({
+      accepted: false,
+      visible: false,
+      showIcon: true,
+    });
   };
 
   const handleIconClick = () => {
-    setVisible(true);
-    setShowIcon(false);
+    setConsentState((prev) => ({
+      ...prev,
+      visible: true,
+      showIcon: false,
+    }));
   };
 
   return (
     <>
       {/* Cookie Consent Banner */}
-      {visible && (
+      {consentState.visible && (
         <div className="fixed bottom-6 right-6 max-w-xs p-6 rounded-2xl bg-black text-white z-50 shadow-2xl border border-blue-600/30">
           <p className="text-sm mb-4 text-gray-300 leading-relaxed text-center">
             We use cookies to improve your experience.{" "}
@@ -69,7 +85,7 @@ export default function GDPRConsent() {
       )}
 
       {/* Cookie Icon */}
-      {showIcon && !visible && (
+      {consentState.showIcon && !consentState.visible && (
         <div className="fixed bottom-6 right-6 z-40">
           <button
             onClick={handleIconClick}
@@ -79,7 +95,7 @@ export default function GDPRConsent() {
             <img
               src="/revisit.svg"
               alt="Cookie Icon"
-              className="w-6 h-6 object-contain brightness-0 invert opacity-90 group-hover:opacity-100" 
+              className="w-6 h-6 object-contain brightness-0 invert opacity-90 group-hover:opacity-100"
             />
           </button>
         </div>

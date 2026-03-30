@@ -22,7 +22,7 @@ const ShowroomCTA = () => {
             {/* Blue Call Button (Primary) */}
             <a
               href="tel:+447399539744"
-              className="inline-flex items-center gap-2 bg-[#0052cc] text-white px-8 py-4 rounded-xl text-sm font-semibold hover:bg-[#0047b3] transition-colors"
+              className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-xl text-sm font-semibold hover:bg-[#0047b3] transition-colors"
             >
               <Phone size={18} />
               Call 07399 539744

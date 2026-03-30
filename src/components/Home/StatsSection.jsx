@@ -52,7 +52,7 @@ const StatsSection = () => {
         <div className="flex flex-col md:flex-row items-center justify-between">
           
           {stats.map((stat, index) => (
-            <React.Fragment key={index}>
+            <React.Fragment key={stat.label}>
               {/* Stat Item Container */}
               <div className="relative flex-1 w-full flex items-center justify-center py-12 px-5 md:py-0">
                 

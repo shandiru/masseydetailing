@@ -9,18 +9,13 @@ import ScrollToTop from "./components/ScrollToTop";
 import Header from "./components/Header";
 import GDPRBanner from "./components/GDPRBanner"
 
-import Boroughbridge from './page/Location/Boroughbridge'
-import Garforth from "./page/Location/Garforth";
-import Harrogate from "./page/Location/Harrogate";
-import Leeds from "./page/Location/Leeds";
-import Thirsk from "./page/Location/Thirsk";
-import Wakefield from "./page/Location/Wakefield";
 import PricingPage from "./page/PricingPage";
 import BookingTerms from "./page/T&C";
 import ScrollToHash from "./components/Home/ScrollToHash";
 import ReviewPage from "./page/Review";
 import NotFound from "./components/NotFound";
 import ServicePage from "./page/ServicePage";
+import LocationPage from "./page/LocationPage";
 function App() {
   return (
     <Router>
@@ -48,13 +43,12 @@ function App() {
           element={<ServicePage serviceKey="full-detail" />}
         />
 
-        <Route path="/locations/boroughbridge" element={<Boroughbridge />} />
-        <Route path="/locations/garforth" element={<Garforth />} />
-        <Route path="/locations/harrogate" element={<Harrogate />} />
-        <Route path="/locations/leeds" element={<Leeds />} />
-        <Route path="/locations/thirsk" element={<Thirsk />} />
-
-        <Route path="/locations/wakefield" element={<Wakefield />} />
+        <Route path="/locations/boroughbridge" element={<LocationPage locationKey="boroughbridge" />} />
+        <Route path="/locations/garforth" element={<LocationPage locationKey="garforth" />} />
+        <Route path="/locations/harrogate" element={<LocationPage locationKey="harrogate" />} />
+        <Route path="/locations/leeds" element={<LocationPage locationKey="leeds" />} />
+        <Route path="/locations/thirsk" element={<LocationPage locationKey="thirsk" />} />
+        <Route path="/locations/wakefield" element={<LocationPage locationKey="wakefield" />} />
 
         <Route path="/pricing" element={<PricingPage />} />
         <Route path="/tcs" element={<BookingTerms />} />

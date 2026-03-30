@@ -1,6 +1,7 @@
 import React from 'react';
 import { Phone, Mail, MapPin, Facebook, Instagram } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { servicesLinks, locationLinks, contactInfo } from '../config/navigation';
 
 const Footer = () => {
   return (
@@ -22,20 +23,21 @@ const Footer = () => {
               Professional mobile car detailing across Yorkshire. We bring the showroom to your door.
             </p>
             <div className="space-y-3 mb-6">
-              <a href="tel:+447399539744" className="flex items-center gap-3 text-sm text-gray-400 hover:text-[#0052cc] transition-colors">
+              {/* Using dynamic contact info */}
+              <a href={`tel:${contactInfo.phoneRaw}`} className="flex items-center gap-3 text-sm text-gray-400 hover:text-[#0052cc] transition-colors">
                 <Phone size={16} className="text-[#0052cc]" />
-                07399 539744
+                {contactInfo.phone}
               </a>
-              <a href="mailto:info@masseydetailing.co.uk" className="flex items-center gap-3 text-sm text-gray-400 hover:text-[#0052cc] transition-colors">
+              <a href={`mailto:${contactInfo.email}`} className="flex items-center gap-3 text-sm text-gray-400 hover:text-[#0052cc] transition-colors">
                 <Mail size={16} className="text-[#0052cc]" />
-                info@masseydetailing.co.uk
+                {contactInfo.email}
               </a>
             </div>
 
-            {/* Social Media Added Here */}
+            {/* Social Media */}
             <div className="flex gap-4">
               <a
-                href="https://www.facebook.com/profile.php?id=100083111173136"
+                href={contactInfo.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-[#1877F2] text-gray-400 transition-all duration-300"
@@ -43,7 +45,7 @@ const Footer = () => {
                 <Facebook size={20} />
               </a>
               <a
-                href="https://www.instagram.com/masseydetailing"
+                href={contactInfo.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-[#E4405F] text-gray-400 transition-all duration-300"
@@ -53,39 +55,35 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Services */}
+          {/* Dynamic Services List */}
           <div>
             <h3 className="text-sm font-bold uppercase tracking-widest mb-6">Services</h3>
             <ul className="space-y-3">
-              {['Maintenance Scheme', 'Full Valet', 'Deep Clean', 'Full Detail'].map((item) => {
-                // If it's the ceramic service, keep spaces (will encode to %20); otherwise, use hyphens
-                const urlPath = item === 'full-detail'
-                  ? encodeURIComponent(item)
-                  : item.toLowerCase().replace(/\s+/g, '-');
-
-                return (
-                  <li key={item}>
-                    <Link
-                      to={`/services/${urlPath}`}
-                      className="text-sm text-gray-400 hover:text-[#0052cc] transition-colors"
-                    >
-                      {item}
-                    </Link>
-                  </li>
-                );
-              })}
+              {servicesLinks.map((service) => (
+                <li key={service.to}>
+                  <Link
+                    to={service.to}
+                    className="text-sm text-gray-400 hover:text-[#0052cc] transition-colors"
+                  >
+                    {service.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Locations */}
+          {/* Dynamic Locations List */}
           <div>
             <h3 className="text-sm font-bold uppercase tracking-widest mb-6">Locations</h3>
             <ul className="space-y-3">
-              {['Boroughbridge', 'Harrogate', 'Thirsk', 'Leeds', 'Garforth', 'Wakefield'].map((loc) => (
-                <li key={loc}>
-                  <Link to={`/locations/${loc.toLowerCase()}`} className="flex items-center gap-2 text-sm text-gray-400 hover:text-[#0052cc] transition-colors">
+              {locationLinks.map((loc) => (
+                <li key={loc.to}>
+                  <Link 
+                    to={loc.to} 
+                    className="flex items-center gap-2 text-sm text-gray-400 hover:text-[#0052cc] transition-colors"
+                  >
                     <MapPin size={14} />
-                    {loc}
+                    {loc.city}
                   </Link>
                 </li>
               ))}
@@ -98,6 +96,8 @@ const Footer = () => {
             <ul className="space-y-3">
               <li><Link to="/" className="text-sm text-gray-400 hover:text-[#0052cc] transition-colors">Home</Link></li>
               <li><Link to="/pricing" className="text-sm text-gray-400 hover:text-[#0052cc] transition-colors">Pricing</Link></li>
+              <li><Link to="/review" className="text-sm text-gray-400 hover:text-[#0052cc] transition-colors">Reviews</Link></li>
+              <li><Link to="/tcs" className="text-sm text-gray-400 hover:text-[#0052cc] transition-colors">Booking T&C's</Link></li>
             </ul>
           </div>
         </div>

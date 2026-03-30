@@ -43,7 +43,7 @@ const TestimonialsSection = () => {
   }, []);
 
   return (
-    <section className="py-24 bg-black">
+    <section className="py-24 bg-black" aria-label="Customer Testimonials">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Heading Section */}
@@ -57,10 +57,15 @@ const TestimonialsSection = () => {
         </div>
 
         {/* Testimonial Card */}
-        <div className="relative max-w-4xl mx-auto">
-          <div className="bg-[#0A0A0A] rounded-3xl border border-white/5 p-10 sm:p-16 text-center transition-all duration-500 shadow-2xl">
+        <div className="relative max-w-4xl mx-auto" role="region" aria-roledescription="carousel">
+          {/* FIX: Added aria-live and aria-atomic for accessibility */}
+          <div 
+            className="bg-[#0A0A0A] rounded-3xl border border-white/5 p-10 sm:p-16 text-center transition-all duration-500 shadow-2xl"
+            aria-live="polite" 
+            aria-atomic="true"
+          >
             
-            {/* Blue Quote Icon matching image */}
+            {/* Blue Quote Icon */}
             <div className="flex justify-center mb-8">
               <Quote className="h-10 w-10 text-blue-600 opacity-60 fill-current" />
             </div>
@@ -69,7 +74,7 @@ const TestimonialsSection = () => {
               “{testimonials[current].text}”
             </p>
 
-            {/* Blue Stars matching image */}
+            {/* Stars */}
             <div className="mt-8 flex items-center justify-center gap-1.5">
               {[...Array(5)].map((_, i) => (
                 <Star
@@ -89,10 +94,11 @@ const TestimonialsSection = () => {
             </div>
           </div>
 
-          {/* Navigation Controls matching image style */}
+          {/* Navigation Controls */}
           <div className="flex items-center justify-center gap-5 mt-10">
             <button
               onClick={prevSlide}
+              aria-label="Previous testimonial"
               className="h-12 w-12 rounded-full border border-white/10 bg-black flex items-center justify-center text-white hover:bg-[#111] transition-all"
             >
               <ChevronLeft className="h-6 w-6" />
@@ -104,6 +110,7 @@ const TestimonialsSection = () => {
                 <button
                   key={index}
                   onClick={() => setCurrent(index)}
+                  aria-label={`Go to testimonial ${index + 1}`}
                   className={`h-2 rounded-full transition-all duration-500 ${
                     current === index
                       ? "w-10 bg-blue-600"
@@ -115,6 +122,7 @@ const TestimonialsSection = () => {
 
             <button
               onClick={nextSlide}
+              aria-label="Next testimonial"
               className="h-12 w-12 rounded-full border border-white/10 bg-black flex items-center justify-center text-white hover:bg-[#111] transition-all"
             >
               <ChevronRight className="h-6 w-6" />

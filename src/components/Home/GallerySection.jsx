@@ -107,9 +107,9 @@ function BeforeAfterSlider({ before, after }) {
       className="relative h-full w-full overflow-hidden cursor-ew-resize select-none"
       style={{ touchAction: "none" }}
     >
-      <img src={after} className="w-full h-full object-cover" draggable="false" alt="After" />
+      <img src={after}  className="w-full h-full object-cover" draggable="false" />
       <div className="absolute inset-0 overflow-hidden" style={{ width: `${pos}%` }}>
-        <img src={before} className="absolute inset-0 w-full h-full object-cover" draggable="false" alt="Before" />
+        <img src={before} alt="massay-detailing" className="absolute inset-0 w-full h-full object-cover" draggable="false" />
       </div>
 
       {/* Blue Divider */}
@@ -186,6 +186,7 @@ export default function GallerySection() {
               <button
                 onClick={() => { prev(); resetAuto(); }}
                 disabled={current === 0}
+                aria-label="Previous project"
                 className="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 text-white hover:border-blue-600 hover:bg-blue-600 disabled:opacity-20 transition-all duration-300"
               >
                 <ChevronLeft size={18} />
@@ -193,6 +194,7 @@ export default function GallerySection() {
               <button
                 onClick={() => { next(); resetAuto(); }}
                 disabled={current === services.length - 1}
+                aria-label="Next project"
                 className="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 text-white hover:border-blue-600 hover:bg-blue-600 disabled:opacity-20 transition-all duration-300"
               >
                 <ChevronRight size={18} />
@@ -211,11 +213,14 @@ export default function GallerySection() {
           onPointerDown={onPointerDown}
           onPointerUp={onPointerUp}
           onPointerLeave={() => setDragStart(null)}
+          role="region"
+          aria-roledescription="carousel"
           style={{ cursor: dragStart !== null ? "grabbing" : "grab" }}
         >
           <div
             ref={trackRef}
             className="flex gap-8 transition-transform duration-[420ms] ease-out"
+            aria-live="polite"
             style={{
               transform: `translateX(calc(-${current} * (min(360px, 85vw) + 32px)))`,
             }}
@@ -247,11 +252,14 @@ export default function GallerySection() {
         </div>
 
         {/* DOT INDICATORS */}
-        <div className="flex items-center justify-center gap-2 mt-12">
+        <div className="flex items-center justify-center gap-2 mt-12" role="tablist">
           {services.map((_, i) => (
             <button
               key={i}
               onClick={() => { goTo(i); resetAuto(); }}
+              role="tab"
+              aria-selected={current === i}
+              aria-label={`Go to project ${i + 1}`}
               className="transition-all duration-300 rounded-full"
               style={{
                 width: i === current ? "28px" : "7px",

@@ -63,7 +63,7 @@ const ServicesSection = () => {
 
           {services.map((service, index) => (
             <Link
-              key={index}
+              key={service.title}
               to={service.link}
               className="group block"
             >

@@ -147,6 +147,7 @@ function QuoteModal({ isOpen, onClose, serviceTitle }) {
 
             {/* Submit */}
             <button
+              aria-expanded={showAll}
               type="submit"
               className="w-full bg-green-600 hover:bg-green-700 active:scale-[0.98] text-white font-bold py-3 rounded-xl transition-all flex items-center justify-center gap-2 text-sm sm:text-base shadow-lg shadow-green-600/20 mt-1"
             >

@@ -117,7 +117,7 @@ const PricingSection = () => {
 
             return (
               <div
-                key={plan.key}
+                key={plan.title}
                 className={`group relative flex flex-col rounded-2xl border transition-all duration-500 bg-[#0A0A0A] ${
                   plan.popular
                     ? "border-blue-600 shadow-[0_0_40px_-15px_rgba(37,99,235,0.3)]"

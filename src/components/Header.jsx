@@ -1,23 +1,10 @@
+// src/components/Header.jsx
 import { Menu, X } from "lucide-react";
 import React, { useEffect, useRef, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 
-const servicesLinks = [
-  { label: "Maintenance Scheme", to: "/services/maintenance-scheme", fromPrice: "£70" },
-  { label: "Full Valet", to: "/services/full-valet", fromPrice: "£100" },
-  { label: "Deep Clean", to: "/services/deep-clean", fromPrice: "£175" },
-  { label: "Full Detail", to: "/services/full-detail", fromPrice: "£400" },
-];
-
-// Separated label into city and county for better styling control
-const locationLinks = [
-  { city: "Boroughbridge", county: "North Yorkshire", to: "/locations/boroughbridge" },
-  { city: "Harrogate", county: "North Yorkshire", to: "/locations/harrogate" },
-  { city: "Thirsk", county: "North Yorkshire", to: "/locations/thirsk" },
-  { city: "Leeds", county: "West Yorkshire", to: "/locations/leeds" },
-  { city: "Garforth", county: "West Yorkshire", to: "/locations/garforth" },
-  { city: "Wakefield", county: "West Yorkshire", to: "/locations/wakefield" },
-];
+// Import the shared navigation configuration
+import { servicesLinks, locationLinks, contactInfo } from "../config/navigation";
 
 const ChevronDown = ({ className = "" }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -43,12 +30,14 @@ export default function Header() {
   const headerRef = useRef(null);
   const { pathname } = useLocation();
 
+  // Close all menus when route changes
   useEffect(() => {
     setMobileOpen(false);
     setServicesOpen(false);
     setLocationsOpen(false);
   }, [pathname]);
 
+  // Close dropdowns when clicking outside the header
   useEffect(() => {
     const onClick = (e) => {
       if (!headerRef.current) return;
@@ -121,8 +110,7 @@ export default function Header() {
                     to={item.to}
                     className="flex items-center justify-between px-4 py-3 text-sm text-white hover:bg-white/10 transition-colors"
                   >
-                    <span>{item.label}  <span className="text-xs text-white/60">from {item.fromPrice}</span> </span>
-
+                    <span>{item.label} <span className="text-xs text-white/60">from {item.fromPrice}</span></span>
                   </Link>
                 ))}
               </div>
@@ -151,7 +139,7 @@ export default function Header() {
                     to={item.to}
                     className="flex flex-col px-4 py-3 hover:bg-white/10 transition-colors"
                   >
-                    <span className="text-sm text-white font-medium">{item.city}  <span className="text-[13px] text-white/40 font-normal leading-tight">{item.county}</span> </span>
+                    <span className="text-sm text-white font-medium">{item.city} <span className="text-[13px] text-white/40 font-normal leading-tight">{item.county}</span></span>
                   </Link>
                 ))}
               </div>
@@ -164,15 +152,14 @@ export default function Header() {
           <NavLink to="/review" className={navLinkClass}>Review</NavLink>
         </nav>
 
-        {/* Call button */}
+        {/* Dynamic Call button using config phone numbers */}
         <a
-          href="tel:+447399539744"
+          href={`tel:${contactInfo.phoneRaw}`}
           className="hidden lg:inline-flex items-center gap-2 bg-blue-600 text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity"
         >
           <PhoneIcon className="h-4 w-4" />
-          07399 539744
+          {contactInfo.phone}
         </a>
-
 
         {/* Mobile toggle */}
         <button
@@ -240,11 +227,11 @@ export default function Header() {
             <NavLink to="/tcs" className="px-3 py-3 rounded-lg text-white hover:bg-white/10">T&C's</NavLink>
 
             <a
-              href="tel:+447399539744"
+              href={`tel:${contactInfo.phoneRaw}`}
               className="mt-4 bg-blue-600 text-white px-4 py-3 rounded-lg text-sm font-semibold text-center hover:opacity-90 flex items-center justify-center gap-2"
             >
               <PhoneIcon className="h-4 w-4" />
-              Call 07399 539744
+              Call {contactInfo.phone}
             </a>
           </div>
         </div>

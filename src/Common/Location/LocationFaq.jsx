@@ -58,7 +58,7 @@ export default function LocationFaq({ data }) {
         {/* FAQ items */}
         <div className="flex flex-col gap-3">
           {faqs.map((faq, i) => (
-            <FaqItem key={i} question={faq.question} answer={faq.answer} />
+            <FaqItem key={faq.question} question={faq.question} answer={faq.answer} />
           ))}
         </div>
 
